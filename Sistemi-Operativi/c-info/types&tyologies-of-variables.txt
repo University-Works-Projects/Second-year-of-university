@@ -1,0 +1,17 @@
+Variables:
+    Types:
+        1. char: 1 byte size for a character
+        2. int: 32 or 64 bits for an integer
+        3. float: Signle precision floating point
+        4. double: Double precision floating point
+    Typologies:
+        Locals:
+            Automatics: Esistono solo quando l'esecuzione è nel blocco in cui sono definite.
+                        Dopo che l'esecuzione lascia il blocco vengono eliminate.
+            Statics: Esistono per l'intera vita di un processo.
+                     È possibile fare riferimenti ad esse solo quando l'esecuzione è nel
+                     blocco in cui sono definite.
+        Globals:
+            Statics: Sono visibili solo nel file in cui sono dichiarate.
+            Non-statics: Esistono sempre e sono visibili ovunque, tranne quando vengono
+                         nascoste da variabili locali.
