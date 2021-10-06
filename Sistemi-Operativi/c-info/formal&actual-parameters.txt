@@ -1,4 +1,4 @@
-TIpologie di parametri di una funzione:
+Tipologie di parametri di una funzione:
     1. Parametri formali
         Sono i parametri con i quali una funzione è definita.
         Esempio:
