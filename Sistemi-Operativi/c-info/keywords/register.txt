@@ -1,0 +1,15 @@
+Keyword: register
+   Info: Suggerisce al compilatore che una variabile verrà usata pesantemente e che sarebbe
+         meglio mantenerla direttamente in un registro del processore per aumentare l'efficienza.
+      
+   Noti di invocazione: 
+      1. Il numero di variaibli dichirabili ragister è limitato.
+      2. Le uniche variabili che possono essere register sono:
+         2.1 Variabili Automatiche
+         2.2 Paramtri formali di una funzione
+      3. Il compilatore può comunque fare di testa sua
+
+   Esempio di invocazione:
+      register int c;
+      for (c = 0; c < 1000; c++) {...}
+
