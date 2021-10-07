@@ -1,0 +1,12 @@
+Keyword: typedef
+    Info: Permette di creare un nuovo nome di tipo da usare al posto di uno vecchio.
+          Usato per:
+            1. Creare tipo portabili.
+            2. Per semplificare sintassi complesse.
+
+    Syntax: typedef oldTypeName newTypeName;
+
+    Examples:
+        1. typedef long long int64;         /* 64-bit integer */
+        2. typedef unsigned char byte;      /* byte type */
+        3. typedef long double extended;
