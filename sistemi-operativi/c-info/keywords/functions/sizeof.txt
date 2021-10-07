@@ -1,0 +1,13 @@
+Keyword: sizeof
+    Library: none
+    Info: Is used to get a type size.
+
+    Function prototype: sizeof (varType or varName);
+
+    Example:
+        1.  int arr[8];
+            8*sizeof(int); // size of arr in bytes
+        2.  int a = 20;
+            printf ("%d\n",sizeof(a));      // Return the size in bytes of a
+            printf ("%d\n",sizeof(int));    // Return the size in bytes of int type
+            printf ("%d\n",sizeof(double)); // Return the size in bytes of double type
