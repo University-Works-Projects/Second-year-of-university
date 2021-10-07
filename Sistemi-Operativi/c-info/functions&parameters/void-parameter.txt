@@ -1,0 +1,2 @@
+Example:
+    int func (void); /* void means it takes no parameters in input */
