@@ -1,0 +1,9 @@
+Standards for:
+    Big programs:
+        1. Scrivere più file .c contententi determinate funzioni, in base a condizioni
+           determinate dal programmatore.
+        2. Scrivere in file .h le costanti e i prototipi delle funzioni.
+            2.1 Usare #include per include i file .h
+
+    Small programs:
+        1. Prototipi, definizioni di funzioni e costanti nello stesso file .c
