@@ -1,0 +1,17 @@
+Tipologie di parametri di una funzione:
+    1. Parametri formali
+        Sono i parametri con i quali una funzione è definita.
+        Esempio:
+            int func (int p1, int p2) {...}
+            // p1 e p2 sono parametri formali
+    2. Paramtri attuali
+        Sono i valori che si assegnano ai parametri formali quando di invoca una funzione.
+        Esempio:
+            int main () {
+                int a = 1, b = 4;
+                func (a, b);
+            }
+            // a e b sono parametri attuali
+
+
+
