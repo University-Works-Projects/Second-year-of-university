@@ -1,0 +1,7 @@
+Possible causes:
+    1. Incorrect array index.
+        Example:
+            int a [5];
+            int d = a[9];
+        Causa: Il C non effettua controlli run-time sugli indici run time, e
+               si sta tentando di accedere a dati fuori dell'array.
