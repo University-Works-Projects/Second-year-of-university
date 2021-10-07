@@ -1,0 +1,8 @@
+Methods:
+    1.  int arr[n];
+        arr[0];
+        arr[..];
+        arr[n];
+    2.  int arr[3] = { n1, n2, n3 };
+    3.  int arr[] = { n1, n2, n3 };     // arr length is calculated automatically
+    4.  inr arr[3][3] = { {1, 1, 1}, {2, 2, 2}, {3, 3, 3} };

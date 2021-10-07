@@ -1,0 +1,5 @@
+Use the function: sizeof(varName or varType)
+
+Example:
+    1. int arr[8];
+       8*sizeof(int); // size of arr
