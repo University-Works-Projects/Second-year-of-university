@@ -9,6 +9,8 @@ Keyword: register
          2.2 Paramtri formali di una funzione
       3. Il compilatore può comunque fare di testa sua
 
+   Syntax: register typeName varName;
+   
    Esempio di invocazione:
       register int c;
       for (c = 0; c < 1000; c++) {...}

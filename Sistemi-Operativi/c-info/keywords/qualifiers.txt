@@ -1,17 +1,15 @@
 Keywords: short, long, signed, unsigned
-
-Qualificatori applicabili ai tipi di dati:
     ATTENZIONE:
         1. Non tutti i qualificatori possono essere applicati a tutti i tipi di variabili.
         2. Possono essere dichiarati più qualificatori per una singola variabile, purchè
            quella variabile li accetti e che non siano opposti.
-
-    Qualificatori per la lunghezza:
-        short: Reduces the size or the precisione of the data type.
-        long: Increase the size or the precisione of the data type.
-    Qualificatori per il segno:
-        signed: Variabile che può assumeri valori positivi e negativi.
-        unsigned: variabile che può assumere solo valori positivi.
-    Syntax: qualifierType varType varName;
+    Info: Qualificatori applicabili ai tipi di dati:
+        Qualificatori per la lunghezza:
+            short: Reduces the size or the precisione of the data type.
+            long: Increase the size or the precisione of the data type.
+        Qualificatori per il segno:
+            signed: Variabile che può assumeri valori positivi e negativi.
+            unsigned: variabile che può assumere solo valori positivi.
+        Syntax: qualifierType varType varName;
 
 
