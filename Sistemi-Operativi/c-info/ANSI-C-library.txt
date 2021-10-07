@@ -1,0 +1,20 @@
+Librerie + breve descrizione:
+    <assert.h> -> Assezioni
+    <ctype.h>  -> Test sui caratteri
+    <errno.h>  -> Codici di errori
+    <float.h>  -> Limiti per floating point
+    <limits.h> -> Limiti
+    <locale.h> -> Informazioni "locali" (lingua, punteggiatura, ecc.)
+    <math.h>   -> Funzioni matematiche
+    <setjmp.h> -> Salti non locali
+    <signal.h> -> Segnali
+    <stdarg.h> -> Gestione argomenti
+    <stddef.h> -> Definizione argomenti
+    <stdio.h>  -> Definizioni di uso generale
+    <stdlib.h> -> Input ed output
+    <stdlib.h> -> Funzioni varie
+    <string.h> -> Funzioni di stringa
+    <time.h>   -> Funzioni relative a ora e data
+
+How to see a functions documentation:
+    man 3 nameFunction
