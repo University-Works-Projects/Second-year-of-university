@@ -1,0 +1,25 @@
+Differenti tipi di dichiarazioni:
+    1.  struct coord {
+            int x;
+            int y;
+        } first, second;    /* Dichiarazioni variabili */
+    2.  struct coord {
+            int x;
+            int y;
+        };
+        struct coord first, second;    /* Dichiarazioni variabili */
+    3.  struct coord {
+            int x;
+            int y;
+        };
+        typedef struct coord coordinate;
+        coordinate first, second;    /* Dichiarazioni variabili */
+    
+    Note:
+        1.  first = second; /* is equal to: */
+            first.x = second.x; first.y = second.y;
+        2.  struct tmp { int x; char s[20]; char ss[2]; };
+            struct tmp = { 3, "looool", "ok" };
+        3.  Se viene passata una struttura come parametro di una funzione, questa verrà copiata e vista (ovviamente) come
+            parametro locare, e ciò è sconveniete per grosse strutture, soprattutto se potrebbero subire modifiche.
+            Conviene pertanto utilizzare del puntatori.
