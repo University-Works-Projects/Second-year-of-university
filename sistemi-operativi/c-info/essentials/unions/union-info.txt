@@ -1,0 +1,22 @@
+Info:
+    Sono identiche alle struct:
+    struct:
+        struct number {
+            char c;     /* campo della struttura */
+            int i;      /* campo della struttura */
+        };
+    union:
+        union number {
+            char c;     /* campo dell'union */
+            int i;      /* campo dell'union */
+        };
+
+    Differenze:
+        struct: Le struct allocano in memoria sufficiente spazio PER OGNI loro campo.
+        union: Le union allocano in memoria una quantità di spazio grande quanto il loro campo più grande.
+               In soldoni i campi, condividendo lo stesso spazio di memoria, possono subire variazioni
+               quando altri campi vengono modificati.
+        Ne consegue che le struct occupano più memoria (se hanno gli stessi campi).
+    
+    Quando usare una union al posto di una struct?
+        1. Quando la logica del programma prevede che due valori non vengano mai usati assieme.
