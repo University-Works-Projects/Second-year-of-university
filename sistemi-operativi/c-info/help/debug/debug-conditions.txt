@@ -1,0 +1,25 @@
+Info:
+    Tramite i comandi:
+        1. #define
+        2. #ifdef
+        3. #endif
+        4. #undef
+        5. #if
+        6. #elif
+        7. #else
+    Si possono decidere (anche durante l'esecuzione) quali porzioni di codici eseguire e quali no.
+
+
+Examples:
+    1.  #define DEBUG
+        #define DEBUG_2
+        ....
+        #ifdef DEBUG    // Se è stata definita la variabile DEBUG tramite #define, esegue il codice fino al prossimo #endif
+        printf ("debug: ...");
+        #endif
+
+        #undef DEBUG_2  // Annulla la definizione precedentemente fatta
+        #ifdef DEBUG_2  // Porzione di codice non eseguita per via della riga precedente
+        ...
+        #endif
+
