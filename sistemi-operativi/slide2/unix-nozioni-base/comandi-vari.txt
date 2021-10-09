@@ -1,0 +1,26 @@
+PER INFORMAZIONI SU UN COMANDO DIGITARE:
+    *command* -help
+    *command* --help
+
+0.  rm -> ReMove (delete) file
+    cp -> CoPy file
+    mv -> MoVe or rename file
+    ln -> LiNk creation (symbolic or not)
+    more, less -> page through a text file
+    ps -> Riporta lo stato dei processi attivi nel sistema
+    nice -n 19 command -> Esegue un comando con una priorità statica
+    renice [+-]value -p pid -> Cambia la priorità di un processo in esecuzione
+    kill pid -> Termina l'esecuzione di un programma
+
+    Comandi per la gestione di file:
+        df [options][directory] -> mostra lo spazio libero nei dischi
+            df -Tm
+        du [options][directory]
+            du
+            du directory
+            du -s directory
+            du -k directory
+1. pwd
+    - Print Working Directory: Ritorna il percorso della cartella in cui si esegue il comando
+2. rmdir directoryName
+    - ReMove directoryName
