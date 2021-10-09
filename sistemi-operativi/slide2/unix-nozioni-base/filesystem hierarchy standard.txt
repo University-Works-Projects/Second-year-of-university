@@ -1,0 +1,22 @@
+/
+    /bin        # Comandi bare per utenti "comuni"
+    /sbin       # Comandi per la gestione del sistema, non destinati ad utenti comuni
+    /dev        # Device dile per accedere a periferiche o sistemi di memorizzazione
+    /etc        # File di configurazione del sistema
+    /home       # "Home directory" degli utenti
+        /user1
+        /user2
+        ...
+    /lib        # Librerie condivise dai programma e utili per il loro funzionamento
+    /proc       # File system virtuale senza reale allocazione su disco. Viene usato per fornire informazioni di sistema relative in modo particolare al kernel.
+    /tmp        # Directory dei file temporanei
+    /var        # Dati variabili, code di stampa
+    /usr        # Contiene gran parte dei programmi esistenti nel sistema
+        /X11R6
+        /bin
+        /include
+        /lib
+        /local
+        /share
+        /src
+            /linux
