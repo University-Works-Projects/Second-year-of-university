@@ -1,0 +1,10 @@
+Switch:
+    U can write a switch case with default option on the top.
+    Example:
+        switch (case) {
+            default:
+            case 0:
+                break;
+            case 1:
+                break;
+        }
