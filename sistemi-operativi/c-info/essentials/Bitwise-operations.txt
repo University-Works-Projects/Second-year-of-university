@@ -1,0 +1,29 @@
+Priority order: ! && ||
+
+Bitwise Operators:
+    1.  Complement ~
+        Example:
+            a  = 01010
+            ~a = 10101
+    2.  AND &
+        Example:
+            a   = 11011
+            b   = 10101
+            a&b = 10001
+    3.  OR |
+        Example:
+            a   = 11001
+            b   = 10001
+            a|b = 11001
+    4.  XOR ^
+        Example:
+            a   = 11001
+            b   = 10011
+            a^b = 01010
+    5.  Shift left << or right >>
+        Example:
+            a    = 11001
+            b    = 11001
+            a<<2 = 00100
+            b>>2 = 00110
+            
