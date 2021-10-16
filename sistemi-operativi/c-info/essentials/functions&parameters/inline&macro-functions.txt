@@ -1,10 +1,13 @@
 
 Inline function:
     Info:
-        An inline function is a normal function that is defined by the inline keyword.
-        An inline function is a short function that is expanded by the compiler.
-        And its arguments are evaluated only once. An inline functions are the short length functions that
-        are automatically made the inline functions without using the inline keyword inside the class.
+        1.  An inline function is a normal function that is defined by the inline keyword.
+            An inline function is a short function that is expanded by the compiler.
+            And its arguments are evaluated only once. An inline functions are the short length functions that
+            are automatically made the inline functions without using the inline keyword inside the class.
+        
+        2.  Inline replaces a call to a function with the body of the function, however,
+            inline is just a request to the compiler that could be ignored.
     Example:
         void inline test_inline_func1(int a, int b) {
             printf ("a=%d and b=%d\n", a, b);
@@ -17,9 +20,12 @@ Inline function:
 
 Macro function:
     Info:
-        It is also called preprocessors directive. The macros are defined by the #define keyword.
-        Before the program compilation, the preprocessor examines the program whenever the preprocessor detects
-        the macros then preprocessor replaces the macro by the macro definition.
+        1.  It is also called preprocessors directive. The macros are defined by the #define keyword.
+            Before the program compilation, the preprocessor examines the program whenever the preprocessor detects
+            the macros then preprocessor replaces the macro by the macro definition.
+    
+        2.  A macro on the other hand, is expanded by the preprocessor before compilation,
+            so it's just like text substitution, also macros are not type checked, inline functions are.
     Examples:
         #define SWAP(a,b)({a ^= b; b ^= a; a ^= b;})
         #define SQUARE(x) (x*x)
