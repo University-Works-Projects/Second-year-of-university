@@ -1,6 +1,5 @@
 Keyword: extern
-   Info: È possibile dichiarare una variabile globale in qualsiasi parte di
-         un programma, anche in un file esterno.
+   Info: È possibile dichiarare una variabile globale in qualsiasi parte di un programma, anche in un file esterno.
          In questo caso, bisogna distinguere tra:
             1. Dichiatazione "reale":
                Sintassi: typeName varName;  // Dichiarazione classica
