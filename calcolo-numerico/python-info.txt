@@ -1,0 +1,9 @@
+How to:
+    1.  Run a python script
+        # Go to the container folder...
+        python *fileName.py*
+
+    2.  Install a module, run (python installation required):
+        pip install *moduleName*
+
+
