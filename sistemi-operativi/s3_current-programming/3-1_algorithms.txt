@@ -1,0 +1,85 @@
+
+Gli algoritmi di Dekker e di Peterson sono basati per mutua esclusione.
+Essi prevedono comeuniche istruzioni atomiche le operazioni di Load e Store.
+
+Algoritmo di Dekker
+
+    Algoritmo di Dekker
+        shared int turn = P;
+        shared boolea needp = false;                shared boolea needq = false;
+        cobegin P // Q coend
+        process P {                                 process Q {
+            while (true) {                              while (true) {
+                /* entry protocol */                        /* entry protocol */
+                needp = true;                               needq = true;
+                while (needq)                               while (needp)
+                if (turn == Q) {                            if (turn == P) {                            
+                    needp = false;                              needq = false;
+                    while (turn == Q)                           while (turn == P)
+                        ; /* do nothing */                      ; /* do nothing */ 
+                    needp = true;                               needq = true;
+                }                                           }
+                critical section                            critical section
+                needp = false; turn = Q;                    needp = false; turn = Q;
+                non-critical section                        non-critical section
+            }                                           }
+        }                                           }
+
+    Si possono facilmente dimostrare le 4 proprietà richieste per le CS:
+        1. Mutua esclusione - slide 75
+        2. Assenza di deadlock - slide 76
+        3. Assenza di ritardi non necessari - slide 77
+        4. Assenza di starvation - slide 77
+
+
+
+Algoritmo di Peterson
+
+    Questo algoritmo differisce da quello appena visto in quanto più semplice e lineare,
+    ed inoltre più facilmente generalizzabile in caso di processi multipli.
+
+    Algoritmo di Peterson
+        shared boolean needp = false; 
+        shared boolean needq = false; 
+        shared int turn;
+        cobegin P // Q coend
+
+        process P {                             process Q {
+            while (true) {                            while (true) {
+                /* entry protocol */                        /* entry protocol */
+                needp = true;                               needq = true; 
+                turn = Q;                                   turn = P;
+                while (needq && turn != P)                  while (needp && turn != Q)
+                    ; /* do nothing */                          ; /* do nothing */ 
+                critical section                            critical section
+                needp = false;                              needq = false; 
+                non-critical section                        non-critical section
+            }                                         }
+        }                                       }
+
+    Algoritmo di Peterson - Generalizzato per N processi
+        shared int[] stage = new int[N];        /* 0-initialized */
+        shared int[] last = new int[N];         /* 0-initialized */
+        cobegin P0 // P1 // ... // PN-1 coend
+        process Pi {                            /* i = 0...N-1 */
+            while (true) {
+                /* Entry protocol */
+                for (int j=0; j < N; j++) {
+                    stage[i] = j; last[j] = i;
+                    for (int k=0; k < N; k++) { 
+                        if (i != k) 
+                            while (stage[k] >= stage[i] && last[j] == i)
+                                ; /* do nothing */
+                    }
+                }
+                critical section
+                stage[i] = 0;  
+                non-critical section
+            }
+        }
+
+    Si possono facilmente dimostrare le 4 proprietà richieste per le CS:
+        1. Mutua esclusione - slide 80
+        2. Assenza di deadlock - slide 81
+        3. Assenza di ritardi non necessari - slide 82
+        4. Assenza di starvation - slide 82

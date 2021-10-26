@@ -1,0 +1,94 @@
+
+Interazione tra processi:
+    - In base a quanto due processi sono "consapevoli" l'uno dell'altro, è possibile
+      stabilire le modalità di interazione fra di loro.
+
+    Tipologie di interazione tra processi:
+        1. Processi reciprocamente "ingrari":
+            - Interagiscono tramite una competizione per le stesse risorse sincronizzata dal SO.
+            - Non c'è condivisione di risorse.
+        2. Processi con una reciproca "indiretta" conoscenza:
+            - Interagiscono tramite un buffer comune usato per scambiarsi informazioni.
+            - Il SO facilita la cooperazione tramite meccanismi di sincronizzazione.
+        3. Processi con una reciproca "diretta" conoscenza:
+            - Comunicazione diretta tramite scambio di messaggi, il tutto sulla base degli id (nei livelli precedenti sconosciuti).
+            - Il SO facilita la cooperazione tramite meccanismi di sincronizzazione.
+
+Proprietà:
+    Def: 
+    
+    Tipologie:
+        1. Safety: L'avanzamento del programma non esegue azioni scorrette, va "nella giusta direzione".
+        2. Liveness: Il programma avanza e non si ferma, è vitale.
+    
+    Esempio:
+      Dato un sistema con N precessi:
+        - All'inizio ogni processo propone un valore.
+        - Alla fine tutti i processi decidono un solo valore tra quelli proposti.
+      Proprietà di safety:
+        Se un processo decide, decide uno dei valori proposti.
+        Se due processi decidono, decidono lo stesso valore.
+      Proprietà di liveness:
+        Prima o poi ogni processo corretto (ovvero non in crash) prenderà una decisione.
+
+    Programmi seguenziali:
+        - Proprietà safety: esprimono la correttezza dello stato finale (il risultato ottenuto è quello voluto).
+        - Proprietà liveness: è la terminazione.
+    Programmazione concorrente:
+        - Proprietà safety: i processi non devono "interferire" fra loro nell'accesso alle risorse condivise.
+          I meccanismi di sincronizzazione servono a garantire le proprietà safety.
+        - Proprietà liveness: I meccanismi di sincronizzazione noon devono prevenire l'avanzamento del programma.
+    
+    SAFETY: Mutua esclusione
+        Def: L'accesso ad una risorsa si dice mutualmente esclusivo se ad ogni istante al max un processo può accedere a tale risorsa.
+
+        La mutua ricorsione permette di risolvere il problema della non interferenza, ma può causare il blocco permanente dei processi (deadlock).
+        
+        Possibili problemi:
+            L'assenza dei seguenti problemi è una proprietà di safety.
+
+            deadlock
+                È una condizione DEFINITIVA,
+                Il deadlock coninvolge tutti i processi che utilizzano un certo insieme di risorse.
+                Esempio di deadlock:
+                    Si immagini di avere i processi P1 e P2 che accendono contemporaneamente (rispettivamente) alle risorse R1 ed R2.
+                    P1 per terminare ha bisogno dell'output di P2, e viceversa. I due processi sono bloccati in attesa circolare.
+                    P1 e P2 sono in deadlock, cosa gravissima in quanto le soluzioni a tale problema consistono nell'uccisione di processi, riavvio della macchina, ecc.
+                SOLUZIONI: "distruttive": uccisione di un processo, al riavvio della macchina, ecc.
+
+            starvation
+                Non è una condizione definitiva.
+                Esempio di starvation:
+                    Siano P1, P2 e P3 dei processi che accedono periodicamente ad una risorsa R.
+                    Si suppone che P1 e P2 si alternino nell'uso di R, escludendone l'accesso a P3.
+                    P3 è in starvation, è come se voi foste in fila e la gente vi superasse di continuo.
+                SOLUZIONI: stabilire una corretta politica di assegnamento.
+
+    Azioni atomiche:
+        Def: Le azioni atomiche vengono compiute in modo indivisibile e soddisfano la condizione: tutto o nulla.
+        SINTASSI: Si indica con <S> che lo statement S deve esser eseguito in modo atomico.
+
+        Parallelismo apparente: L'azione atomica non interferisce con altri processi durante la sua esecuzione.
+        Parallelismo apparente: L'avvicendamento (basato sul meccanismo degli interrupt) fra i processi avviene prima o dopo l'azione che quindi non interferisce.
+                                (*) Avvicendamento: alternanza, successione cadenzata nel tempo e nello spazio: l'a. delle stagioni
+
+        Esempi si azioni atomiche:
+            - Singole istruzioni del linguaggio macchina (in assembly non è detto)
+            - Parallelismo apparente: Il meccanismo degli interrupt garantisce che un interrupt venga eseguito prima o dopo un'istruzione, mai "durante".
+            - Parallelismo reale: Anche se due istruzioni cercano di accedere alla stessa cella di memoria, la politica di arbitraggio del bus garantisce delle precedenze.
+
+        Interleaving si azioni atomiche:
+            Qual è l0ordine di esecuzione del seguente programma?
+              process P {
+                <op A>    // Generica operazione atomica A
+                <op B>
+              }
+              process B {
+                <op 1>
+                <op 2>
+              }
+            In tal caso la questione è puramente probabilistica. Per vedere le possibili esecuzioni si visioni un cammino
+            del grado a pag. 46 delle relative slide.
+
+
+

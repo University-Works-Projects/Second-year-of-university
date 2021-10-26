@@ -1,0 +1,110 @@
+
+Soluzione alla non-interferenza
+    Quando le istruzioni da eseguire non sono atomiche in che modo si evita l'interferenza?
+    Bisogna fare in modo che certe porzioni di codice vengano eseguite senza interruzioni (in modo atomico).
+    Il tutto è ottenibile tramite la mutua esclusione a patto che rispetti alcune proprietà.
+
+Obiettivi
+    1. Garantire che le sezioni critiche siano eseguite in modo manualmente atomico.
+    2. Evitare situazioni di blocco dovute a deadlock o starvation.
+    3. Evitare attese non necessarie: un proceso può far attendere altri processi sse taluni devono usare una sezione critica attualmente occupata dal processo iniziale.
+
+Sezioni critiche:
+    Def: La parte di un programma che utilizza una o più risorse condivise è detta sezione critica o CS.
+    SINTASSI:
+        [enter cs] punto di inizio di una sezione critica
+        [exit cs]  punto di fine ...
+        Nota: bisogna indicare queste sezioni per segnalarle al SO.
+    Esempi:
+        1. Sezione critica:
+            process A {
+                a = read();
+                tot += a;       // Sezione critica, tot è una risorsa condivisa
+            }
+            process B {
+                b = read;
+                tot += b;       // Sezione critica, tot è una risorsa condivisa
+            }
+        2. Utilizzo della sintassi di CS:
+            x := 0
+            Process A
+                [enter cs]; c++; [exit cs];
+            Process B
+                [enter cs]; c++; [exit cs];
+        3. Esempio generico:
+            Process A
+                val = rand();       // Il So capisce cosa può essere eseguito in parallelo.
+                [enter cs]
+                a += val;
+                b += val;
+                [exit cs]
+            Process B
+                val = rand();
+                [enter cs]          // Il SO capisce che questa sezione deve essere eseguita in modo atomico.
+                a *= val;
+                b *= val;
+                [exit cs]
+
+    Sintassi in C per realizzarer N processi:
+        process Pk {        /* k = 1 ... i = N */
+            while (true) {
+                [enter cs]
+                // critical section
+                [exit cs]
+                // non critical section
+            }
+        }
+
+    Assunzione
+        D'ora in poi si ragionerà tenendo conto della seguente assunzione:
+        Se un processo entra in una CS prima o poì ne uscirà, pertanto un programma terminerà sempre al di fuori di una CS.
+        
+    Requisiti per le cs:
+        1. MUTUA ESCLUSIONE: Solo un processo alla volta deve essere all'interno della CS fra tutti quelli che hanno una CS per la stessa risorsa.
+        2. ASSENZA DI DEADLOCK: Uno scenario in cui tutti i processi restano bloccati definitivamente è inammissibile.
+        3. ASSENZA DI DELAY INUTILI: Un processo fuori dalla CS non deve ritardare l'ingresso della CS da parte di un altro processo.
+        4. EVENTUALY ENTRY (ASSENZA DI STARVATION): Ogni processo che lo richiede, prima o poi entra nella CS.
+
+    Possibili approcci:
+        1. Software: Responsabilità affidata ai processi che vogliono usufruire di risorse condivise, il tutto viene fatto
+                     tramite algoritmi che come nota negativa generano busy waiting.
+        2. Hardware: Tramite specifiche istruzioniin linguaggio macchina (soluzione non general-purpose)
+        3. Approcco basato su supporto nel SO o nel linguaggio:
+            La responsabilità di garantire la mutua esclusione ricade sul SO e sul linguaggio.
+            Esempi: Sempafori, Monitor, Messa passing.
+
+        1. Approccio software:
+            Vedi file "3-2-algorithms.txt"
+            In sintesi questo approccio:
+                - Permette di risolvere il problema delle critical section.
+                - È basato sul busy waiting, il quale speca il tempo del processore.
+                - Tecnica da evitare.
+        2. Approccio hardware:
+            Questo approccio consiste nella disabilitazione degli interrupt.
+            
+            Esempio:
+                process P {
+                    while (true) {
+                        disable interrupt
+                        critical section
+                        enable interrupt
+                        non-critical section
+                    }
+                }
+            
+            Problemi:
+                - Il SO deve lasciare in mano ai processoli la responsabilità di riattivare gli interrupt, il che è pericoloso.
+                - Riduce il grado di parallelismo ottenibile dal processore.
+                - Non funzia su sistemi multiprocessore.
+
+
+
+
+
+
+
+
+Altro:
+    Maccanismo dei turni per rompere la simmetria.
+    Maccaniscmo di "prendere l'iniziativa" per superare la stetta alternanza dei turni.
+    Meccaniscmo di "lasciare il passo" per evitare situazioni di deadlock.

@@ -1,0 +1,53 @@
+
+Processo:
+    Def: Attività controllata da un programma svolto su un processore.
+    - È un entità dinamica
+    - È descritto tramite:
+        1. La sua immagine di memoria (dati e strutture dati)
+        2. La sua immagine nel processore (contenuto dei registri)
+        3. Lo stato di avanzamento (se è in esecuzione o in attesa)
+
+Stati del processo:
+    1. Running: Processo in esecuzione.
+    2. Waiting: Processo in attesa di qualche evento, non può essere eseguito.
+    3. Ready: Processo pronto per l'esecuzione, ma il processore è attualmente impegnato in altre attività.
+
+Gestione di processi multipli:
+    1. Multiprogramming:
+        - Più processi in un singolo processore.
+        - Parallelismo APPARENTE.
+    2. Multiprocessing:
+        - Più processi su una macchina con processori multipli.
+        - Parallelismo REALE.
+        - Memoria condivisa.
+    3. Distributed processing:
+        - Più processi su un insieme di computer distribuiti ed indipendenti.
+        - Parallelismo REALE.
+        - Memoria privata per ogni processore.
+
+Concorrenza:
+    - Insisme di notazione per descrivere l'esecuzione concorrente di programmi.
+    - Insisme di tecniche per risolvere problemi associati all'esecuzione concorrente, ovvero COMUNICAZIONE e SINCRONIZZAZIONE.
+    - Due programmi si dicono in esecuzione concorrente se vengono eseguiti in parallelo (reale o apparente)
+
+Differenze: Multiprocessing vs Multiprogramming
+    Multiprogramming:
+        - Processi multipli sono "alternati nel tempo" per dare l'impressione di avere un multiprocessore.
+        - Ad ogni istante al max un processo è in esecuzione.
+        - Si parla di interleaving.
+        - Simultaneità simulatà.
+    Multiprocessing:
+        - Più processi vengono eseguiti simultaneamente di processori diversi.
+        - Proceddi "alternati nello spazio"
+        - Si parla di overlapping.
+        - Esecuzione simultanea.
+    Origine dei problemi:
+        1. Non è possibile predire gli istanti temporali in cui vengono eseguite le istruzioni.
+        2. i due processi accedono ad una o più risorse condivise.
+
+Race condition:
+    Def: Un sistema concorrente basato su processi multipli presenta una race condition qualora il risultato finale dell'esecuzione dei
+         processi dipende dalla temporizzazione o dalla sequenza con cui quest'ultimi vengono eseguiti.
+    - Per scrivere un programma concorrente è necassario eliminare le race condition.
+    
+
