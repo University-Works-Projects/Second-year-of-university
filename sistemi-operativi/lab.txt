@@ -1,0 +1,26 @@
+30-09-2021
+    Topologie di linguaggi:
+        - Linguaggi di programmazione      -> operazioni aritmeticol logiche
+        - Linguaggi di scripting           -> operazione di esecuzione di programmi
+        - Linguaggi {operativi|imperativi} -> modo verbale imperativo (fai questo, fai quello), esempio: C, C++
+        - Linguaggi funzionali             -> computazione come funzioni matematiche, esempio Lisp
+        - Linguaggi logici                 -> computazione per mezzo di fatti e regole (predicati logici)
+
+21-10-2021
+    Filosofia di Unix: Progettato da programmatori per programmatori
+
+
+Processo = è un'attività controllata da un programma che si svolge su un processore (entità dinamica)
+Programma = specifica una sequenza di instruzioni (entità statica)
+Processo != programma
+
+differenza tra processi e thread:
+    Un processo può avere più thread e questi possono condividere le risorse tipo la memoria tra loro,
+    diversi processi invece non possono condividere le risorse direttamente (hanno memoria privata) ma
+    possono usare altre tecniche come message passing.
+    Nulla vieta di avere molti processi che collaborano tra loro con message passing e ogniuno di loro
+    è multi-threading.
+
+
+
+
