@@ -1,7 +1,10 @@
+File system:
+    Insieme delle directory accessibili dal SO
+
 /
-    /bin        # Comandi bare per utenti "comuni"
+    /bin        # Comandi base per utenti "comuni"
     /sbin       # Comandi per la gestione del sistema, non destinati ad utenti comuni
-    /dev        # Device dile per accedere a periferiche o sistemi di memorizzazione
+    /dev        # Device file per accedere a periferiche o sistemi di memorizzazione
     /etc        # File di configurazione del sistema
     /home       # "Home directory" degli utenti
         /user1
@@ -20,3 +23,4 @@
         /share
         /src
             /linux
+    /proc       # file system virtuale per dialogare col Kernel

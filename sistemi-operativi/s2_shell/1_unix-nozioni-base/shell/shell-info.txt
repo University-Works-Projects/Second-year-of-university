@@ -1,0 +1,13 @@
+Cos'è una shell?
+    È un programma che consente all'utente di eseguire programmi tramite un prompt personalizzabile.
+
+Forma generale:
+    *comando* {-|--}*opzione* *argomento*
+
+Leggere la documentazione online
+    - man *command*
+    - info *command*
+    - apropos *keyword*
+    - man man
+    - info
+

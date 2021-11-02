@@ -1,6 +1,7 @@
 PER INFORMAZIONI SU UN COMANDO DIGITARE:
     *command* -help
     *command* --help
+    man *command*
 
 0.  rm -> ReMove (delete) file
     cp -> CoPy file
