@@ -106,5 +106,5 @@ Sezioni critiche:
 
 Altro:
     Maccanismo dei turni per rompere la simmetria.
-    Maccaniscmo di "prendere l'iniziativa" per superare la stetta alternanza dei turni.
-    Meccaniscmo di "lasciare il passo" per evitare situazioni di deadlock.
+    Maccanismo di "prendere l'iniziativa" per superare la stetta alternanza dei turni.
+    Meccanismo di "lasciare il passo" per evitare situazioni di deadlock.
