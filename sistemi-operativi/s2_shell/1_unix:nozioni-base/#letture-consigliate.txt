@@ -1,3 +1,0 @@
-Fiamingo and Debula, Introduction to Unix, sezioni 1-4
-Glass and Ables, Unix for Programmers and Users, sezione 1-2
-Per la sintassi completa dei comandi: man e info

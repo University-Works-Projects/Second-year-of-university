@@ -1,5 +1,0 @@
-^S -> Sospende la visualizzazione
-^Q -> Riattiva la visualizzazione
-^C -> Cancella l'operazione in corso
-^S -> end-of-line
-^V -> Tratta il carattere di controllo seguente come un carattere normale

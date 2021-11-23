@@ -1,0 +1,16 @@
+0.0 Others
+
+    0.1 Letture consigliate:
+        - Fiamingo and Debula, Introduction to Unix, sezioni 5-6
+        - Glass and Ables, Unix for Programmers and Users, sezione 3-6
+        - Per la sintassi completa dei comandi: man e info
+
+    0.2 Comandi
+
+1.0 shell
+
+2.0 File
+
+3.0 Gestione dei processi
+    
+        

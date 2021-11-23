@@ -1,0 +1,184 @@
+0.0 Others
+
+    0.1 Letture consigliate:
+        - Fiamingo and Debula, Introduction to Unix, sezioni 1-4
+        - Glass and Ables, Unix for Programmers and Users, sezione 1-2
+        - Per la sintassi completa dei comandi: man e info
+
+    0.2 Comandi
+
+        0.2.1 PER INFORMAZIONI SU UN COMANDO DIGITARE:
+            *command* -help
+            *command* --help
+            man *command*
+
+        0.2.2 COMANDI PER LA GESTIONE DEI FILE    
+            rm                          # ReMove (delete) file
+            rmdir directoryName         # ReMove directoryName
+            cp                          # CoPy file
+            mv                          # MoVe or rename file
+            ln                          # LiNk creation (symbolic or not)
+            more, less                  # page through a text file
+            ps                          # Riporta lo stato dei processi attivi nel sistema
+            nice -n 19 command          # Esegue un comando con una priorità statica
+            renice [+-]value -p pid     # Cambia la priorità di un processo in esecuzione
+            kill pid                    # Termina l'esecuzione di un programma
+            pwd                         # Print Working Directory, ritorna il percorso della cartella in cui si esegue il comando.
+            df [options][directory]     # Mostra lo spazio libero nei dischi
+                df -Tm
+            du [options][directory]
+                du
+                du directory
+                du -s directory
+                du -k directory
+            
+        0.2.3 COMANDI RELATIVI AI Processi
+            &                           # Lancia un processo in background, p.e: long_cmd &
+            jobs                        # Lista dei processi in background
+            %*number*                   # Si riferisce al processo in background, p.e: kill %2
+            fg                          # Porta un processo in background in foreground, p.e: fg %*number*
+            bg                          # Fa partire in background i processi fermati
+
+    0.3 filesystem-hierarchy-standard
+
+        File system: Insieme delle directory accessibili dal SO
+
+        /
+            /bin        # Comandi base per utenti "comuni"
+            /sbin       # Comandi per la gestione del sistema, non destinati ad utenti comuni
+            /dev        # Device file per accedere a periferiche o sistemi di memorizzazione
+            /etc        # File di configurazione del sistema
+            /home       # "Home directory" degli utenti
+                /user1
+                /user2
+                ...
+            /lib        # Librerie condivise dai programma e utili per il loro funzionamento
+            /proc       # File system virtuale senza reale allocazione su disco. Viene usato per fornire informazioni di sistema relative in modo particolare al kernel.
+            /tmp        # Directory dei file temporanei
+            /var        # Dati variabili, code di stampa
+            /usr        # Contiene gran parte dei programmi esistenti nel sistema
+                /X11R6
+                /bin
+                /include
+                /lib
+                /local
+                /share
+                /src
+                    /linux
+            /proc       # file system virtuale per dialogare col Kernel
+
+1.0 shell
+
+    1.1 Info
+
+        1.1.1 Cos'è una shell?
+            È un programma che consente all'utente di eseguire programmi tramite un prompt personalizzabile.
+
+        1.1.2 Comando shell - Forma generale
+            *comando* {-|--}*opzione* *argomento*
+
+        1.1.3 Leggere la documentazione online
+            - man *command*
+            - info *command*
+            - apropos *keyword*
+            - man man
+            - info
+
+    1.2 Control-keys
+        ^S -> Sospende la visualizzazione
+        ^Q -> Riattiva la visualizzazione
+        ^C -> Cancella l'operazione in corso
+        ^S -> end-of-line
+        ^V -> Tratta il carattere di controllo seguente come un carattere normale
+        ^Z -> Ferma il processo in foreground
+
+2.0 File
+
+    2.1 Info-file:
+        1. Ogni file è associato ad un utente proprietario.
+        2. Un gruppo, ovvero insieme di utenti, con speciali dirittu sul file.
+
+    2.2 Ottenere informazioni complete su un file:
+        ls -lgsF fileName.extension
+        output: *output1* *output2* *...* *output7* 
+            Dove:
+                - output1 = Numero_blocchi
+                - output2 = Tipologie di permessi del file
+                - output3 = Conteggio di hard-link
+                - output4 = L'username e gruopename detentori del file
+                - output5 = Dimensioni in byte
+                - output6 = Data di ultima modifica
+                - output7 = Nome del file
+        Outputs-info:
+            output2:
+                Info-output2: Ogni file è associato a 9 flag chiamati "Permission", ognuno dei quali ha
+                              associato un valore numerico trattabile tramite linea di comando.
+                Permission:
+                    1. User:
+                        1.1 R - User read permission        
+                        1.2 W - User write permission        
+                        1.3 X - User execution permission
+                    2. Group:
+                        2.1 R - User read permission        
+                        2.2 W - User write permission        
+                        2.3 X - User execution permission
+                    3. Others:
+                        3.1 R - User read permission        
+                        3.2 W - User write permission        
+                        3.3 X - User execution permission
+                Permission-value:
+                    Ogni permesso ha un valore associato.
+                    Read    -> 4
+                    Write   -> 2
+                    Execute -> 1
+                Info-permission:
+                    Read:
+                        - File regolari: Possibilità di leggere il contenuto.
+                        - Directory: Leggere l'elenco dei file contenuti in una directory.
+                    Write:
+                        - File regolari: Possibilità di modificare il contenuto.
+                        - Directory: Possiblità di aggiungere, modificare e rimuovere file.
+                    Execute:
+                        - File regolari: Possibilità di eseguire il file
+                        - Directory: Possibilità di fare cd nella directory o accedervi tramite path
+
+    2.3 Comandi riguardanti ai gruppi:
+        1.  groups                          # Ritorna una lista dei gruppi esistenti.
+        2.  groups [userName]               # Ritorna i gruppi associati a *userName*.
+        3.  newgrp <newGroupName>           # Crea un nuovo gruppo
+        4.  chgrp <groupName> <file(s)>     # Modifica il gruppo associato ad un file.
+        5.  chmod [ugo][+-][rwxX] file(s)   # Cambia i permessi di un file.
+        Esempi:
+            3.1 chmod u+x file.sh
+                # Aggiunto il diritto di esecuzione per il proprietario del file, ovvero l'user u.
+            3.2 chmod -R ug+rwX src/*
+                # Aggiunge il diritto di scrittura e lettura (rw) per l'user e il gruppo (ug) nei file
+                # contenuti in src/ in maniera ricorsiva (-R). Inoltre aggiunge il diritto di esecuzione per le directory X.
+            3.3 chmod -R o-rwx $HOME
+                # Toglie tutti i diritti a tutti gli utente che non sono il proprietario e non appartengono al gruppo, ricorsivamente.
+            3.4 chmod 755 public_html
+                # Assegna:
+                    # Diritti di scrittura, lettura ed esecuzione (7 = 4 + 2 + 1) per l'user u.
+                    # Diritti di scrittura ed esecuzione (5 = 4 + 1) per il gruppo g.
+                    # Diritti di scrittura ed esecuzione (5 = 4 + 1) per gli altri utenti o.
+            3.5 chmod 644 .procmailrc
+                # Assegna:
+                    # Diritti di scrittura e lettura (6 = 4 + 2) per l'user u.
+                    # Diritti di scrittura (4 = 4) per il gruppo g.
+                    # Diritti di scrittura (4 = 4) per gli altri utenti o.
+
+3.0 Gestione dei processi
+    
+    3.1 Attributi associati ai processi
+        - pid           -> Identificatore del processo
+        - ppid          -> Parent pid, identificatore del processo padre
+        - nice number   -> priorità statica del processo; può essere cambiata col comando nice
+        - TTY           -> Terminal device associata al processo
+        - real, effective {user | group} id       -> Identificatore del ower del group owner del processo
+        - altro: memoria usata, cpu usata, ecc.
+
+    3.2 Altro sui processi
+        - Processi in foreground: "controllano" il terminale da cui vengono lanciati. In ogni istante, un sono processo è in foreground.
+        - Processi in background: Vengono eseguiti senza "controllare" dal a cui sono "attaccati".
+        - Job control: Permette di portate i processi da foreground a background e viceversa.
+        
