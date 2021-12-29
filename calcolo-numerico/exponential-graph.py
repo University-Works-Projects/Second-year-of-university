@@ -8,7 +8,8 @@ accuracy = 100
 x = np.linspace(leftRange, rigthRange, num = accuracy)
 y_exp = np.exp(x)
 
-plt.plot(x, y_exp, color = 'red', linestyle = '--')
+plt.plot(x, y_exp, color = 'red', linestyle = '--') # Linea della legenda
+plt.plot(x, y_exp, color = 'blue', linestyle = '--')     # Linea del grafico
 
 plt.legend(['exp'])
 
