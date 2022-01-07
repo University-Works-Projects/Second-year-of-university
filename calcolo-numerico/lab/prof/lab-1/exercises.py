@@ -3,13 +3,32 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def machine_precision ():
+def machine_precision_ex_1 ():
     esp, counter = 1, 0
     while esp + 1 > 1:
         esp /= 2.0
         counter += 1
 
     print ("Machine precision: " + esp)
+    print ("Iterations: " + counter)
+
+def machine_precision_ex_2 ():
+    esp, counter = np.float16(1.0), 0
+    while np.float16(1.0) + esp > np.float16(1.0):
+        esp /= np.float16(2.0)
+        counter += 1
+
+    print ("Machine precision (float16): " + esp)
+    print ("Iterations: " + counter)
+
+    print
+def machine_precision_ex_2_bis ():
+    esp, counter = np.float64(1.0), 0
+    while np.float64(1.0) + esp > np.float64(1.0):
+        esp /= np.float64(2.0)
+        counter += 1
+
+    print ("Machine precision (float64): " + esp)
     print ("Iterations: " + counter)
 
 def matplotlib_ex_1 (accuracy = 100, leftRange = -5, rightRange = 5):
