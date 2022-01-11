@@ -79,9 +79,9 @@ def matplotlib_ex_2_bis (k):
         """
     return (matplotlib_ex_2(n + 1) / matplotlib_ex_2 (n))
 
-    arange = np.arange(50)                                                      # lista di 50 valori, da 0 a 49
-    plt.plot(arange, [relative_error(i) for i in arange])                       # grafico con i valori arange nelle ascisse 
-                                                                                # e l'errore relativo al valore i-esimo di arange calcolato con la funzione r(k)
+    arange = np.arange(50)                                          # lista di 50 valori, da 0 a 49
+    plt.plot(arange, [relative_error(i) for i in arange])           # grafico con i valori arange nelle ascisse 
+                                                                    # e l'errore relativo al valore i-esimo di arange calcolato con la funzione r(k)
     plt.legend(['relative error'])
     plt.show()
 
