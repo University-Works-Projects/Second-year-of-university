@@ -50,13 +50,12 @@ x = np.ones((n,1))
 b =  np.matmul(A,x)#andiamo a costruirci il termine noto noi conoscendo la soluzione esatta - Matrix product of two arrays.
 #b= A@x
 
-#fattorizzazione LU(LR o metodo di eliminazione gaussiana) con pivoting (=invertire o scambiare le righe)(pivot in caso a11 è uguale a 0)
-#A=LR L tr inf e R tr sup (la funzione ritornerà un'unica matrice la quale sarà R diagonale compresa
-#sopra e L sotto(diagonale di L sono tutti 1 a priori))
-#PA=LR con P matrice di permutazione
-#riguardo piv ritornato dalla funzione: "se il vettore nella posizione 2 vale 4 vuole dire che la riga 2 è
-#stata scambiata con la riga 4"
-#se non scambi => 0 1 2 3 => la matrice di permutazione è come se fosse la matrice identità
+# fattorizzazione LU con pivoting (pivot in caso a11 è uguale a 0)
+# A=LR L tr inf e R tr sup (la funzione ritornerà un'unica matrice la quale sarà R diagonale compresa
+# sopra e L sotto(diagonale di L sono tutti 1 a priori))
+# riguardo piv ritornato dalla funzione: "se il vettore nella posizione 2. vale 4, alloea vuole dire che la riga 2 è
+# stata scambiata con la riga 4"
+# se non scambi => 0 1 2 3 => la matrice di permutazione è come se fosse la matrice identità
 lu, piv = LUdec.lu_factor(A)
 
 #RISOLUZIONE DI Ax=b => PLUx=b => {PLy=b & Ux=y} => {Ly=Pb & Ux=y}
