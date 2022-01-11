@@ -2,7 +2,6 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 
-
 def machine_precision_ex_1 ():
     esp, counter = 1, 0
     while esp + 1 > 1:
@@ -21,7 +20,6 @@ def machine_precision_ex_2 ():
     print ("Machine precision (float16): " + esp)
     print ("Iterations: " + counter)
 
-    print
 def machine_precision_ex_2_bis ():
     esp, counter = np.float64(1.0), 0
     while np.float64(1.0) + esp > np.float64(1.0):
@@ -48,8 +46,6 @@ def matplotlib_ex_1 (accuracy = 100, leftRange = -5, rightRange = 5):
     plt.legend(['sin'], ['cos'])
     plt.title('Sine and cosine from -5 to 5')
     plt.show()
-
-
 
 def matplotlib_ex_2 (n):
     """
