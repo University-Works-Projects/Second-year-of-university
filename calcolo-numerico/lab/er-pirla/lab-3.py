@@ -1,16 +1,4 @@
 '''
-Guarda, mi è venuta in disgusto la mia sapienza; come l'ape che ha raccolto troppo miele,
-ho bisogno di mani che si tendano a me.
-Perciò debbo discendere nel profondo: come tu fai la sera quando scomparisci dietro il mare e
-dispensi la luce tua anche al mondo degli inferi, tu astro fulgentissimo!
-Al pari di te, io debbo tramontare, come dicono gli uomini, tra i quali voglio discendere.
-Benedicimi dunque, occhio tranquillo, che puoi contemplare senza invidia anche una felicità troppo grande!
-Benedici il calice che sta per traboccare, affinchè l'acqua ne esca dorata e
-porti da per tutto il riflesso della tua gioia!
-Vedi! Questo calice vuol essere vuotato un'altra volta e Zarathustra vuol ridivenire uomo.
-Così cominciò la discesa di Zarathustra.
-'''
-'''
 1 esercizio)soluzione del problema dei minimi quadrati applicato alla approssimazione dei
 dati con un polinomio.
 Dati alcuni punti nel piano chiede di calcolare un polinomio (il grado varierà)
