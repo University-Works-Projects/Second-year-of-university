@@ -1,0 +1,119 @@
+Template 4 a keyword
+    Keyword:
+        Info:
+
+        ...
+
+        Syntax:
+
+        Example:
+        
+---------------------------------------------------------------------------------------
+
+Keyword: extern
+   Info: È possibile dichiarare una variabile globale in qualsiasi parte di un programma, anche in un file esterno.
+         In questo caso, bisogna distinguere tra:
+            1. Dichiatazione "reale":
+               Sintassi: typeName varName;  // Dichiarazione classica
+               Info: La variabile viene allocata in memoria.
+            2. Dichiarazione "extern":
+               Sintassi: extern typeName varName;
+               Info: Con questa dichiarazione non si alloca nulla in memoria, ma si informa che
+                     ci si riferisce ad una varibile varName dichiarata in un'altro file.
+
+Keywords: short, long, signed, unsigned
+    ATTENZIONE:
+        1. Non tutti i qualificatori possono essere applicati a tutti i tipi di variabili.
+        2. Possono essere dichiarati più qualificatori per una singola variabile, purchè
+           quella variabile li accetti e che non siano opposti.
+    Info: Qualificatori applicabili ai tipi di dati:
+        Qualificatori per la lunghezza:
+            short: Reduces the size or the precisione of the data type.
+            long: Increase the size or the precisione of the data type.
+        Qualificatori per il segno:
+            signed: Variabile che può assumeri valori positivi e negativi.
+            unsigned: variabile che può assumere solo valori positivi.
+        Syntax: qualifierType varType varName;
+
+Keyword: register
+   Info: Suggerisce al compilatore che una variabile verrà usata pesantemente e che sarebbe
+         meglio mantenerla direttamente in un registro del processore per aumentare l'efficienza.
+      
+   Noti di invocazione: 
+      1. Il numero di variaibli dichirabili ragister è limitato.
+      2. Le uniche variabili che possono essere register sono:
+         2.1 Variabili Automatiche
+         2.2 Paramtri formali di una funzione
+      3. Il compilatore può comunque fare di testa sua
+
+   Syntax: register typeName varName;
+   
+   Esempio di invocazione:
+      register int c;
+      for (c = 0; c < 1000; c++) {...}
+
+Keyword: typedef
+    Info: Permette di creare un nuovo nome di tipo da usare al posto di uno vecchio.
+          Usato per:
+            1. Creare tipo portabili.
+            2. Per semplificare sintassi complesse.
+
+    Syntax: typedef oldTypeName newTypeName;
+
+    Examples:
+        1. typedef long long int64;         /* 64-bit integer */
+        2. typedef unsigned char byte;      /* byte type */
+        3. typedef long double extended;
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Functions
+
+    Template 4 a function keyword
+        Keyword:
+        Library:
+        Info:
+
+        ...
+
+        Syntax:
+
+        Example:
+
+    ---------------------------------------------------------------------------------------
+
+    Keyword: malloc, free
+        Library: <stdlib.h>
+        Info:
+            1. malloc: Alloca size bytes nell'heap (memoria dinamica)
+            2. free: Libera la memoria allocata
+            Per ogni chiamata malloc, deve esserci la corrispondente chiamata free.
+            Non è possibile deallocare parte di un blocco di memoria o un blocco di
+            memoria già deallocato.
+
+        Function prototype:
+            1. void malloc(sizeof(int));
+            2. void free(void *ptr)
+
+        Example:
+            1.  void *malloc (size_t n_bytes);      /* malloc alloca n_bytes nell'heap */
+                free (void *p);                     /* free libera la memoria allocata */
+            2.  int *p;
+                p = (int *) malloc(sizeof(int));    /* Allocate 4 bytes */
+                scanf("%d", p);
+                printd("%d", *p);
+                free(p);
+
+    Keyword: sizeof
+        Library: none
+        Info: Is used to get a type size.
+
+        Function prototype: sizeof (varType or varName);
+
+        Example:
+            1.  int arr[8];
+                8*sizeof(int); // size of arr in bytes
+            2.  int a = 20;
+                printf ("%d\n",sizeof(a));      // Return the size in bytes of a
+                printf ("%d\n",sizeof(int));    // Return the size in bytes of int type
+                printf ("%d\n",sizeof(double)); // Return the size in bytes of double type

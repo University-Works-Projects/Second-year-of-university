@@ -1,0 +1,70 @@
+Formal & actual parameters
+
+    Tipologie di parametri di una funzione:
+        1. Parametri formali
+            Sono i parametri con i quali una funzione è definita.
+            Esempio:
+                int func (int p1, int p2) {...}
+                // p1 e p2 sono parametri formali
+        2. Paramtri attuali
+            Sono i valori che si assegnano ai parametri formali quando di invoca una funzione.
+            Esempio:
+                int main () {
+                    int a = 1, b = 4;
+                    func (a, b);
+                }
+                // a e b sono parametri attuali
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Inline&macro-functions
+
+    Inline function:
+        Info:
+            1.  An inline function is a normal function that is defined by the inline keyword.
+                An inline function is a short function that is expanded by the compiler.
+                And its arguments are evaluated only once. An inline functions are the short length functions that
+                are automatically made the inline functions without using the inline keyword inside the class.
+            
+            2.  Inline replaces a call to a function with the body of the function, however,
+                inline is just a request to the compiler that could be ignored.
+        Example:
+            void inline test_inline_func1(int a, int b) {
+                printf ("a=%d and b=%d\n", a, b);
+            }
+
+            int inline test_inline_func2(int x) {
+                return x*x;
+            }
+
+
+    Macro function:
+        Info:
+            1.  It is also called preprocessors directive. The macros are defined by the #define keyword.
+                Before the program compilation, the preprocessor examines the program whenever the preprocessor detects
+                the macros then preprocessor replaces the macro by the macro definition.
+        
+            2.  A macro on the other hand, is expanded by the preprocessor before compilation,
+                so it's just like text substitution, also macros are not type checked, inline functions are.
+        Examples:
+            #define SWAP(a,b)({a ^= b; b ^= a; a ^= b;})
+            #define SQUARE(x) (x*x)
+
+        Conditiona Macros:
+            Example:
+                #ifdef PRJ_REL_01
+                ..
+                .. code of REL 01 ..
+                ..
+                #else
+                ..
+                .. code of REL 02 ..
+                ..
+                #endif
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Void parameters
+
+    Example:
+        int func (void); /* void means it takes no parameters in input */

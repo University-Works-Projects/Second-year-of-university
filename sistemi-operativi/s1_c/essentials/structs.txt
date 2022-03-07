@@ -1,4 +1,4 @@
-Differenti tipi di dichiarazioni:
+Possible declarations
     1.  struct coord {
             int x;
             int y;

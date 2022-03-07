@@ -1,9 +1,0 @@
-Keyword:
-    Info:
-
-    ...
-
-    Syntax:
-
-    Example:
-    
