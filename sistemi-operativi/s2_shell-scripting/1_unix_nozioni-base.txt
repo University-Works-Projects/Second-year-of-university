@@ -32,7 +32,7 @@
                 du -s directory
                 du -k directory
             
-        0.2.3 COMANDI RELATIVI AI Processi
+        0.2.3 COMANDI RELATIVI AI PROCESSI
             &                           # Lancia un processo in background, p.e: long_cmd &
             jobs                        # Lista dei processi in background
             %*number*                   # Si riferisce al processo in background, p.e: kill %2
@@ -96,51 +96,60 @@
 
     2.1 Info-file:
         1. Ogni file è associato ad un utente proprietario.
-        2. Un gruppo, ovvero insieme di utenti, con speciali dirittu sul file.
+        2. Un gruppo, ovvero insieme di utenti, con speciali diritti sul file.
 
     2.2 Ottenere informazioni complete su un file:
+        
         ls -lgsF fileName.extension
-        output: *output1* *output2* *...* *output7* 
-            Dove:
-                - output1 = Numero_blocchi
-                - output2 = Tipologie di permessi del file
-                - output3 = Conteggio di hard-link
-                - output4 = L'username e gruopename detentori del file
-                - output5 = Dimensioni in byte
-                - output6 = Data di ultima modifica
-                - output7 = Nome del file
-        Outputs-info:
-            output2:
-                Info-output2: Ogni file è associato a 9 flag chiamati "Permission", ognuno dei quali ha
-                              associato un valore numerico trattabile tramite linea di comando.
-                Permission:
-                    1. User:
-                        1.1 R - User read permission        
-                        1.2 W - User write permission        
-                        1.3 X - User execution permission
-                    2. Group:
-                        2.1 R - User read permission        
-                        2.2 W - User write permission        
-                        2.3 X - User execution permission
-                    3. Others:
-                        3.1 R - User read permission        
-                        3.2 W - User write permission        
-                        3.3 X - User execution permission
-                Permission-value:
-                    Ogni permesso ha un valore associato.
-                    Read    -> 4
-                    Write   -> 2
-                    Execute -> 1
-                Info-permission:
-                    Read:
-                        - File regolari: Possibilità di leggere il contenuto.
-                        - Directory: Leggere l'elenco dei file contenuti in una directory.
-                    Write:
-                        - File regolari: Possibilità di modificare il contenuto.
-                        - Directory: Possiblità di aggiungere, modificare e rimuovere file.
-                    Execute:
-                        - File regolari: Possibilità di eseguire il file
-                        - Directory: Possibilità di fare cd nella directory o accedervi tramite path
+        
+            output: *output1* *output2* *...* *output7* 
+                Dove:
+                    - output1 = Numero_blocchi
+                    - output2 = Tipologie di permessi del file
+                    - output3 = Conteggio di hard-link
+                    - output4 = L'username e gruop-name detentori del file
+                    - output5 = Dimensioni in byte
+                    - output6 = Data di ultima modifica
+                    - output7 = Nome del file
+            
+            Outputs-info:
+                
+                output2:
+
+                    Info-output2:
+                        Ogni file è associato a 9 flag chiamati "Permission", ognuno dei quali ha
+                        associato un valore numerico trattabile tramite linea di comando.
+                        
+                        Permission:
+                            1. User:
+                                1.1 R - User read permission        
+                                1.2 W - User write permission        
+                                1.3 X - User execution permission
+                            2. Group:
+                                2.1 R - User read permission        
+                                2.2 W - User write permission        
+                                2.3 X - User execution permission
+                            3. Others:
+                                3.1 R - User read permission        
+                                3.2 W - User write permission        
+                                3.3 X - User execution permission
+                        
+                        Permission-value:
+                            Ogni permesso ha un valore associato.
+                            Read    -> 4
+                            Write   -> 2
+                            Execute -> 1
+
+                        Info-permission:
+                            Read:
+                                - File regolari: Possibilità di leggere il contenuto.
+                                - Directory: Leggere l'elenco dei file contenuti in una directory.
+                            Write:
+                                - File regolari: Possibilità di modificare il contenuto.
+                                - Directory: Possiblità di aggiungere, modificare e rimuovere file.
+                            Execute:
+                                - File regolari: Possibilità di eseguire il file
+                                - Directory: Possibilità di fare cd nella directory o accedervi tramite path
 
     2.3 Comandi riguardanti ai gruppi:
         1.  groups                          # Ritorna una lista dei gruppi esistenti.
@@ -148,6 +157,7 @@
         3.  newgrp <newGroupName>           # Crea un nuovo gruppo
         4.  chgrp <groupName> <file(s)>     # Modifica il gruppo associato ad un file.
         5.  chmod [ugo][+-][rwxX] file(s)   # Cambia i permessi di un file.
+        
         Esempi:
             3.1 chmod u+x file.sh
                 # Aggiunto il diritto di esecuzione per il proprietario del file, ovvero l'user u.

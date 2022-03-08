@@ -13,5 +13,3 @@ Switch:
 
 TIPS:
     1. When you copy and paste a function, you need to generalize it.
-
-

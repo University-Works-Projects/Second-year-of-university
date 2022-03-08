@@ -1,9 +1,11 @@
 Variables:
+
     Types:
         1. char: 1 byte size for a character
         2. int: 32 or 64 bits for an integer
         3. float: Signle precision floating point
         4. double: Double precision floating point
+
     Typologies:
         Locals:
             Automatics: Esistono solo quando l'esecuzione è nel blocco in cui sono definite.
