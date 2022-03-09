@@ -1,5 +1,6 @@
 SINTASSI:
-    0. Sintassi in C per realizzarer N processi:
+
+    0. Sintassi in C per realizzare N processi:
         process Pk {        /* k = 1 ... i = N */
             while (true) {
                 [enter cs]
@@ -8,8 +9,10 @@ SINTASSI:
                 // non critical section
             }
         }
+
     1. Istruzioni atomiche
         Si indica con <S> che lo statement S deve esser eseguito in modo atomico.
+
     2. Sezioni critiche CS
         process A {
                 a = read();

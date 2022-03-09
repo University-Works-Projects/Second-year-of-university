@@ -5,12 +5,52 @@
         - Glass and Ables, Unix for Programmers and Users, sezione 3-6
         - Per la sintassi completa dei comandi: man e info
 
-    0.2 Comandi
+    0.2 Sommario
+        1.0 Comandi built-in
+        2.0 Meta-caratteri
+        3.0 Redirezione dell'I/O & Pipes
+        4.0 Wildcard
+        5.0 Command substitution
+        6.0 Sequenza
+            - Condizionali
+            - Non condizionali
+        7.0 Raggruppaento di comandi
+        8.0 Esecuzione in background
+        9.0 Quoting
+        10.0 Sub-shell
+        11.0 Variabili
+            - Locali
+            - Di ambiente
+        12.0 Script
+        13.0 Here document
 
-1.0 shell
+1.0 Comandi built-in
 
-2.0 File
+    Esterni
+        Quando si richiede l'esecuzione di un comando esterno, il corrispondente file eseguibilt
+        viene cercato, caricato in memoria ed eseguito.
+        Esempio: Il comando ls si trona in /bin/ls
 
-3.0 Gestione dei processi
+    Interni
+        Il omando viene riconosciuto ed eseguito dalla shell.
+        Esempi:
+            1. echo     # displays all of its arguments to standard output
+            1. cd       # change directory
+
+2.0 Meta-caratteri
+    Vedi slide n.37
+
+3.0 Redirezione dell'I/O
+
+
+4.0
+
+.0 
     
-        
+.0  
+    
+.0     
+    
+.0 
+    
+.0 
