@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+</head>
+
+<body>
+    <div id="es6" class="esercizio">
+        <h1>Esercizio 4</h1>
+        <h2>Pokédex:</h2>
+        <p>Rispondi alle seguenti domande e
+            clicca su <b>Invia </b>per spedire
+            i risultati. </p>
+        <form name="form1" method="post" action="http://www.cs.unibo.it/test.php">
+            <ol>
+                <li>Quali tra questi Pokémon hai
+                    cattuato?<br>
+                    <table border='1' cellpadding="10">
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="checkbox" value="Pikachu">
+                                Pikachu
+                            </td>
+                            <td>
+                                <img height="84" width="84" src="https://cdn.bulbagarden.net/upload/0/0d/025Pikachu.png" alt="Pikachu">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="checkbox2" value="Jigglypuff">
+                                Jigglypuff
+                            </td>
+                            <td>
+                                <img height="84" width="84" src="https://cdn.bulbagarden.net/upload/3/3e/039Jigglypuff.png" alt="Jigglypuff">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="checkbox3" value="Mr. Mime">
+                                Mr. Mime
+                            </td>
+                            <td>
+                                <img height="84" width="84" src="https://cdn.bulbagarden.net/upload/e/ec/122Mr._Mime.png" alt="Mr. Mime">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="checkbox4" value="Eevee">
+                                Eevee
+                            </td>
+                            <td>
+                                <img height="84" width="84" src="https://cdn.bulbagarden.net/upload/e/e2/133Eevee.png" alt="Eevee">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="checkbox5" value="Onix">
+                                Onix
+                            </td>
+
+                            <td>
+                                <img height="84" width="84" src="https://cdn.bulbagarden.net/upload/9/9a/095Onix.png" alt="Onix">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="checkbox6" value="Charmander">
+                                Charmander
+                            </td>
+                            <td>
+                                <img height="84" width="84" src="https://cdn.bulbagarden.net/upload/7/73/004Charmander.png" alt="Charmander">
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                </li>
+
+                <li>Qual è il tuo Pokémon preferito
+                    tra questi?<br>
+                    <select name="favourite_pokemon" size="1">
+                        <option selected>Pikachu</option>
+                        <option>Jigglypuff</option>
+                        <option>Mr. Mime</option>
+                        <option>Eevee</option>
+                        <option>Onix</option>
+                        <option>Charmander</option>
+                    </select>
+                </li>
+            </ol>
+            <input type="submit" name="Submit" value="Invia">
+            <input type="reset" name="Submit2" value="Annulla">
+        </form>
+    </div>
+</body>
+
+</html>
