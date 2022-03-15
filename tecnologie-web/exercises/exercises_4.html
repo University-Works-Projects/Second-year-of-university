@@ -25,56 +25,88 @@
     <h2>Esercizio 4</h2>
     <h3>Pokédex</h3>
     <p>Rispondi alle seguenti domande e clicca su <b>Invia</b> per spedire i risultati.</p>
-    <ol>
-        <li>
-            Quali tra questi Pokémon hai catturato?
-            <table border="1" cellpadding="5">
-                <tr>
-                    <td><input type="checkbox" name="checkbox" value="Luigi Di Maio">Luigi Di Maio</td>
-                    <th><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.italiancomics.it%2Fupload%2Fimages%2Fautore(93).jpg&f=1&nofb=1"
-                            alt="Giggino"></th>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="checkbox" value="Matteo Renzi">Matteo Renzi</td>
-                    <th><img src="https://www.quotidianpost.it/wp-content/uploads/2014/07/Matteo_Renzi_2.jpg"
-                            alt="Renzi"></th>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="checkbox" value="Enrico Letta">Enrico Letta</td>
-                    <th><img src=""
-                            alt="Letta"></th>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="checkbox" value="Mario Draghi">Mario Draghi</td>
-                    <th><img src=""
-                            alt="Draghi"></th>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="checkbox" value="Matteo Salvini">Matteo Salvini</td>
-                    <th><img src=""
-                            alt="Salvini"></th>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="checkbox" value="Giuseppe Conte">Giuseppe Conte</td>
-                    <th><img src=""
-                            alt="Conte"></th>
-                </tr>
-            </table>
-        </li><br>
-        <li>Qual è il tuo Pokémon preferito?<br>
-            <select name="favourite-pokemon" size="1">
-                <option selected>Luigi Di Maio</option>
-                <option>Matteo Renzi</option>
-                <option>Enrico Letta</option>
-                <option>Mario Draghi</option>
-                <option>Matteo Salvini</option>
-                <option>Giuseppe Conte</option>
-            </select>
-        </li>
-    </ol>
-    <input type="submit" name="Submit_1" value="Send">
-    <input type="reset" name="Submit_2" value="Cancel">
-
+    <form method="post" action="http://www.cs.unibo.it/test.php">
+        <ol>
+            <li>
+                Quali tra questi Pokémon hai catturato?
+                <table border="1" cellpadding="5">
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="checkbox" value="Luigi Di Maio">
+                            Luigi Di Maio
+                        </td>
+                        <th>
+                            <img width="500" height="380" src="http://img.fliptab.io/sky/1920x1200/124086861.jpg"
+                                alt="Giggino">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="checkbox" value="Matteo Renzi">
+                            Matteo Renzi
+                        </td>
+                        <th>
+                            <img width="500" height="380" src="http://img.fliptab.io/sky/1920x1200/124086861.jpg"
+                                alt="Renzi">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="checkbox" value="Enrico Letta">
+                            Enrico Letta
+                        </td>
+                        <th>
+                            <img width="500" height="380" src="http://img.fliptab.io/sky/1920x1200/124086861.jpg"
+                                alt="Letta">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="checkbox" value="Mario Draghi">
+                            Mario Draghi
+                        </td>
+                        <th>
+                            <img width="500" height="380" src="http://img.fliptab.io/sky/1920x1200/124086861.jpg"
+                                alt="Draghi">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="checkbox" value="Matteo Salvini">
+                            Matteo Salvini
+                        </td>
+                        <th>
+                            <img width="500" height="380" src="http://img.fliptab.io/sky/1920x1200/124086861.jpg"
+                                alt="Salvini">
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="checkbox" value="Giuseppe Conte">
+                            Giuseppe Conte
+                        </td>
+                        <th>
+                            <img width="500" height="380" src="http://img.fliptab.io/sky/1920x1200/124086861.jpg"
+                                alt="Conte">
+                        </th>
+                    </tr>
+                </table>
+            </li>
+            <br>
+            <li>Qual è il tuo Pokémon preferito?<br>
+                <select name="favourite-pokemon" size="1">
+                    <option selected>Luigi Di Maio</option>
+                    <option>Matteo Renzi</option>
+                    <option>Enrico Letta</option>
+                    <option>Mario Draghi</option>
+                    <option>Matteo Salvini</option>
+                    <option>Giuseppe Conte</option>
+                </select>
+            </li>
+        </ol>
+        <input type="submit" name="Submit_1" value="Send">
+        <input type="reset" name="Submit_2" value="Cancel">
+    </form>
 </body>
 
 </html>
