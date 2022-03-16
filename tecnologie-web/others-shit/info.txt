@@ -1,17 +1,9 @@
 <|--
     alt + maiusc + f
-    maiusc + 1 poi tab -> scrive nel file un documento html base
     ctrl+shift+i -> format code
-    <br> == \n
-
-    - Elementi
-        - block (ovvero che necessitano di più di 1 riga)
-        - inline (tutti su una riga, p.e: <strong> ... </strong>)
-    - Un elemento può avere attributi, p.e: <html lang="it">
 -->
 
 HTML5 Tutorial Italiano 02 - Sintassi di base: elementi, attributi, documento ecc..
-
 
     auto close tag
     auto rename tag
@@ -25,7 +17,3 @@ HTML5 Tutorial Italiano 02 - Sintassi di base: elementi, attributi, documento ec
     - Anatomia documento HTML
     - Includere caratteri speciali
     - Commenti
-
-Video 3
-
-    Nell'head ci sono tutte quelle informazioni utili riguardanti la pagina, ma che non devono apparire a schermo
