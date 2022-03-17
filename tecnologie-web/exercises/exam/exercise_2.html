@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise_2</title>
+    <script src="www.bootstrap.com" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <h1>Exercise 2</h1>
+        <h2>Index <a href="../../site-index.html" title="Index">here</a></h2>
+
+        <h3>Exercise text</h3>
+        <p>• Scrivere il codice HTML (senza CSS) di una semplice
+            pagina web che parla di elettrodomestici in cui viene
+            mostrato un titolo non troppo grande, in corsivo e in
+            grassetto.
+            <br>• Subito dopo il titolo ci sia un blocco contenente una
+            tabella (con almeno 2 righe e 3 colonne) a sinistra di 5
+            checkbox collegata ad una funzione javascript (non
+            serve scriverla) che visualizzi il paragrafo (che di default
+            in HTML è visualizzato) della voce selezionata sotto il
+            blocco della checkbox, separato da una riga orizzontale.
+            <br>• Si importi Bootstrap nella pagina HTML.
+        </p>
+
+        <h1>Solution</h1>
+        <h2><i><b>Yo we talking about.. eletrodomestics(?).. here.. again, but it's different!</b></i></h2>
+        <div>
+            <p>Tabella con almeno 2 righe e 3 colonne affiancata a 5 checkbox:</p>
+            <table>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>ao</td>
+                                <td>ao</td>
+                                <td>ao</td>
+                            </tr>
+                            <tr>
+                                <td>ao</td>
+                                <td>ao</td>
+                                <td>ao</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <label for="cb_1">checbox 1</label>
+                        <input id="cb_1" type="checkbox" name="checbox_1" onclick="javascriptFunction()">
+                        <label for="cb_2">checbox 2</label>
+                        <input id="cb_2" type="checkbox" name="checbox_2" onclick="javascriptFunction()">
+                        <label for="cb_3">checbox 3</label>
+                        <input id="cb_3" type="checkbox" name="checbox_3" onclick="javascriptFunction()">
+                        <label for="cb_4">checbox 4</label>
+                        <input id="cb_4" type="checkbox" name="checbox_4" onclick="javascriptFunction()">
+                        <label for="cb_5">checbox 5</label>
+                        <input id="cb_5" type="checkbox" name="checbox_5" onclick="javascriptFunction()">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <p>Hai selezionato la casella:</p>
+    </main>
+</body>
+
+</html>
