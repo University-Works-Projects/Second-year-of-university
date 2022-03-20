@@ -1,0 +1,14 @@
+/* Nome elemento -> Per applicare la regola ad elementi dello stesso tipo. */
+body {
+  background-color: yellow;
+}
+
+/* "." + nome classe -> Per applicare la regola ad elementi della stessa classe. */
+.title {
+  color: blue;
+}
+
+/* "#" + id -> Per applicare la regola al solo elemento con quello specifico id. */
+#p1 {
+  color: red;
+}
