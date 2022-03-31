@@ -1,0 +1,24 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, h2 {
+    background-color: gray;
+    font-style:italic;
+    text-align:right;
+}
+
+.fragment {
+    background-color: yellow;
+}
+
+.commodo {
+    background-color: red;
+    font-weight: bold;
+    letter-spacing: 15px;
+    font-size: 130%;
+}
+
+.quote {
+    background-color: yellow;
+}
