@@ -1,0 +1,5 @@
+Legenda:
+    FS -> From Solution
+        Caratteristica aggiunta dopo aver preso visione della soluzione del prof, in quanto
+        dall'immagine della consegna non era possibile intuirne l'utilizzo.
+ 

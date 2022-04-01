@@ -1,0 +1,29 @@
+body {
+    font-family: Courier New;           /* FS */
+    padding: 10px;                      /* FS */
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+#title {
+    text-align: center;
+}
+
+#section_1 {
+    background-color: lightgray;
+    text-align:justify;                 /* FS */
+}
+
+span.class_1 {
+    background-color: red;
+    font-size: 130%;
+    text-decoration: underline;
+    color: blue;
+}
+
+#sub_section_2_1 {
+    font-style: italic;
+    border: dashed blue;
+}
