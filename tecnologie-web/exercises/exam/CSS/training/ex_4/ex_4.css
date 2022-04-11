@@ -1,0 +1,29 @@
+body {
+    margin: 40px;
+    text-align:justify;                 /* FS */
+    font-family: 'Book Antiqua';        /* FS */
+}
+
+.container {
+    display: grid;
+    height: 400px;
+    grid-template-areas: "head head head head"
+                         "col1 col2 col3 col4"
+                         "foot foot foot foot";
+}
+
+#col_1 {
+    grid-area: col1;
+}
+
+#col_2 {
+    grid-area: col2;
+}
+
+#col_3 {
+    grid-area: col3;
+}
+
+#col_4 {
+    grid-area: col4;
+}
