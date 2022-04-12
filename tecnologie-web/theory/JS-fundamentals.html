@@ -16,30 +16,43 @@
 
         <h3>Important things about JS</h3>
         <ol>
-            <li>JavaScript Display Possibilities <a href="https://www.w3schools.com/Js/js_output.asp">here</a></li>
-            <li>Reserved words <a href="https://www.w3schools.com/Js/js_reserved.asp">here</a></li>
-            <li>Strings are written inside double or single quotes:<br>
-                <code>let str = "ao;"</code> is equivalent to <code>let str = 'ao';</code>
+            <li>
+                <h4>Only JS</h4>
+                <ol>
+                    <li>JavaScript Display Possibilities <a href="https://www.w3schools.com/Js/js_output.asp">here</a></li>
+                    <li>Reserved words <a href="https://www.w3schools.com/Js/js_reserved.asp">here</a></li>
+                    <li>Strings are written inside double or single quotes:<br>
+                        <code>let str = "ao;"</code> is equivalent to <code>let str = 'ao';</code>
+                    </li>
+                    <li>undefined value:<br>
+                        <code>let exampleVar; // No value assigned -> exampleVar's value is <b>undefined</b></code>
+                    </li>
+                    <li><code>let x = "5" + 2 + 3; // x = "523"</code><br>
+                        <code>let x = 2 + 3 + "5"; // x = (2 + 3) + "5" = 5 + "5" = "55"</code>
+                    </li>
+                    <li>Variable declared using <code>var</code> are <u>always</u> global:<br>
+                        <code>
+                            {<br>
+                            let x;<br>
+                            const y;<br>
+                            } // x and y cannot b3 used here<br>
+                            {<br>
+                            var z;<br>
+                            } // z can b3 used here
+                        </code>
+                    </li>
+                    <li>About constant (they're more bastards than u think): <a href="https://www.w3schools.com/Js/js_const.asp">here</a></li>
+                    <li><code>===</code> operator stands for: 'not equal value or not equal type'</li>
+                    <li>Scientific notation 4 extra {large | small} numbers:<br>
+                        <code>let x = 123e5; // x = 12300000<br>
+                            let y = 123e-5;  // y = 0,00123
+                        </code>
+                    </li>
+                </ol>
             </li>
-            <li>undefined value:<br>
-                <code>let exampleVar; // No value assigned -> exampleVar's value is <b>undefined</b></code>
+            <li>
+                <h4>HTML utils 4 JS</h4>
             </li>
-            <li><code>let x = "5" + 2 + 3; // x = "523"</code><br>
-                <code>let x = 2 + 3 + "5"; // x = (2 + 3) + "5" = 5 + "5" = "55"</code>
-            </li>
-            <li>Variable declared using <code>var</code> are <u>always</u> global:<br>
-                <code>
-                    {<br>
-                    let x;<br>
-                    const y;<br>
-                    } // x and y cannot b3 used here<br>
-                    {<br>
-                    var z;<br>
-                    } // z can b3 used here
-                </code>
-            </li>
-            <li>About constant (they're more bastards than u think): <a href="https://www.w3schools.com/Js/js_const.asp">here</a></li>
-            <li><code>===</code> operator stands for: 'not equal value or not equal type'</li>
         </ol>
 
         <h3>Good practices</h3>
@@ -58,6 +71,12 @@
         <ol>
             <li>Type operators: <code>typeof</code> and <code>instanceof</code></li>
             <li>Bitwise Operators</li>
+            <li>Any variable can be emptied by setting the value to undefined:<br>
+                <code>let x = 4;   // typeof x return 'number'<br>
+                    x = undefined; // x's value is  now 'undefined' & typeof sx now returns 'undefined'
+                </code>
+            </li>
+            <li>If you access an object method without (), it will return the function definition. Example <a href="https://www.w3schools.com/Js/tryit.asp?filename=tryjs_objects_function">here</a>.</li>
         </ol>
 
     </main>
