@@ -14,10 +14,10 @@
         <h2>Index <a href="../site-index.html" title="Index">here</a></h2>
         Yo hello bro!
 
-        <h3>Important things about JS</h3>
-        <ol>
+        <h3>Important things about:</h3>
+        <ul>
             <li>
-                <h4>Only JS</h4>
+                <h4>JS</h4>
                 <ol>
                     <li>JavaScript Display Possibilities <a href="https://www.w3schools.com/Js/js_output.asp">here</a></li>
                     <li>Reserved words <a href="https://www.w3schools.com/Js/js_reserved.asp">here</a></li>
@@ -48,12 +48,16 @@
                             let y = 123e-5;  // y = 0,00123
                         </code>
                     </li>
+                    <li>Fully documentation about JS string methods: <a href="https://www.w3schools.com/jsref/jsref_obj_string.asp">JavaScript String Reference</a></li>
                 </ol>
             </li>
             <li>
                 <h4>HTML utils 4 JS</h4>
+                <ol>
+                    <li>JavaScript Event Handlers 4 <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">HTML DOM Events</a>.</li>
+                </ol>
             </li>
-        </ol>
+        </ul>
 
         <h3>Good practices</h3>
         <ol>
@@ -63,6 +67,7 @@
                 <ol>
                     <li>Use the '<code>$</code>' simbol as an alias 4 the main functione in a JavaScript library.</li>
                     <li>Use the '<code>_</code>' simbol as an alias 4 private (hidden) variables</li>
+                    <li>Use methods 2 manipulate strings and not treat them as arrays! (they're not arrays)</li>
                 </ol>
             </li>
         </ol>
@@ -72,12 +77,39 @@
             <li>Type operators: <code>typeof</code> and <code>instanceof</code></li>
             <li>Bitwise Operators</li>
             <li>Any variable can be emptied by setting the value to undefined:<br>
-                <code>let x = 4;   // typeof x return 'number'<br>
+                <code>
+                    let x = 4;     // typeof x return 'number'<br>
                     x = undefined; // x's value is  now 'undefined' & typeof sx now returns 'undefined'
                 </code>
             </li>
             <li>If you access an object method without (), it will return the function definition. Example <a href="https://www.w3schools.com/Js/tryit.asp?filename=tryjs_objects_function">here</a>.</li>
+            <li>Comparing two JavaScript objects always returns false.</li>
         </ol>
+
+        <h3>Utils</h3>
+        <ul>
+            <li>
+                <h4>JS</h4>
+                <ul>
+                    <li>Useful String methods:
+                        <ul>
+                            <li><code>substring(start, end)</code></li>
+                            <li><code>substr(start, length)</code></li>
+                            <li><code>replace(str2replace, newStr) // see also the <a href="https://www.w3schools.com/Js/tryit.asp?filename=tryjs_string_replace_global"><b>/g</b> flag</a> for this method!</code></li>
+                            <li><code>concat(str1, str2) // This method is equivalent 2 the plus operator.</code></li>
+                            <li><code>trim() // Remove useless whitespaces</code></li>
+                            <li><code>split() // Convert a string to an array</code></li>
+                        </ul>
+                    </li>
+                    <li>Useful Number methods:
+                        <ul>
+                            <li><code>numVar.toExponential(baseToConvert) // See more <a href="https://www.w3schools.com/Js/tryit.asp?filename=tryjs_number_toexponential">here</a></code></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li></li>
+        </ul>
 
     </main>
 </body>

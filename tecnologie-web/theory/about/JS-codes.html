@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="demo"></p>
+
+    <!-- QUESTI DUE script SONO EQUIVALENTI !!! -->
+
+    <script>
+        let header = "Templates Literals";
+        let tags = ["template literals", "javascript", "es6"];
+
+        let html = `<h2>${header}</h2><ul>`;
+
+        for (const x of tags) {
+            html += `<li>${x}</li>`;
+        }
+
+        html += `</ul>`;
+        document.getElementById("demo").innerHTML = html;
+    </script>
+
+    <script>
+        let header2 = "Templates Literals";
+        let tags2 = ["template literals", "javascript", "es6"];
+
+        let html2 = "<h2>" + header2 + "</h2><ul>";
+
+        for (x2 of tags2) {
+            html2 += "<li>" + x2 + "</li>";
+        }
+
+        html2 += "</ul>";
+        document.getElementById("demo").innerHTML = html2;
+    </script>
+
+</body>
+
+</html>
