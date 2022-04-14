@@ -14,24 +14,32 @@
         <h2>Index <a href="../site-index.html" title="Index">here</a></h2>
         Yo hello bro!
 
-        <h3>Important things about:</h3>
+
+        <h2>References & Others</h2>
         <ul>
-            <li>
-                <h4>JS</h4>
-                <ol>
-                    <li>JavaScript Display Possibilities <a href="https://www.w3schools.com/Js/js_output.asp">here</a></li>
-                    <li>Reserved words <a href="https://www.w3schools.com/Js/js_reserved.asp">here</a></li>
-                    <li>Strings are written inside double or single quotes:<br>
-                        <code>let str = "ao;"</code> is equivalent to <code>let str = 'ao';</code>
-                    </li>
-                    <li>undefined value:<br>
-                        <code>let exampleVar; // No value assigned -> exampleVar's value is <b>undefined</b></code>
-                    </li>
-                    <li><code>let x = "5" + 2 + 3; // x = "523"</code><br>
-                        <code>let x = 2 + 3 + "5"; // x = (2 + 3) + "5" = 5 + "5" = "55"</code>
-                    </li>
-                    <li>Variable declared using <code>var</code> are <u>always</u> global:<br>
-                        <code>
+            <li>JavaScript (and HTML DOM) Reference <a href="https://www.w3schools.com/jsref/default.asp">here</a></li>
+            <li>JavaScript Array Reference <a href="https://www.w3schools.com/jsref/jsref_obj_array.asp">here</a></li>
+            <li>#HTML utils 4 JS JavaScript Event Handlers 4 <a
+                    href="https://www.w3schools.com/jsref/dom_obj_event.asp">HTML DOM Events</a>.</li>
+        </ul>
+
+
+
+        <h3>Important things about: JS</h3>
+        <ol>
+            <li>JavaScript Display Possibilities <a href="https://www.w3schools.com/Js/js_output.asp">here</a></li>
+            <li>Reserved words <a href="https://www.w3schools.com/Js/js_reserved.asp">here</a></li>
+            <li>Strings are written inside double or single quotes:<br>
+                <code>let str = "ao;"</code> is equivalent to <code>let str = 'ao';</code>
+            </li>
+            <li>undefined value:<br>
+                <code>let exampleVar; // No value assigned -> exampleVar's value is <b>undefined</b></code>
+            </li>
+            <li><code>let x = "5" + 2 + 3; // x = "523"</code><br>
+                <code>let x = 2 + 3 + "5"; // x = (2 + 3) + "5" = 5 + "5" = "55"</code>
+            </li>
+            <li>Variable declared using <code>var</code> are <u>always</u> global:<br>
+                <code>
                             {<br>
                             let x;<br>
                             const y;<br>
@@ -40,36 +48,38 @@
                             var z;<br>
                             } // z can b3 used here
                         </code>
-                    </li>
-                    <li>About constant (they're more bastards than u think): <a href="https://www.w3schools.com/Js/js_const.asp">here</a></li>
-                    <li><code>===</code> operator stands for: 'not equal value or not equal type'</li>
-                    <li>Scientific notation 4 extra {large | small} numbers:<br>
-                        <code>let x = 123e5; // x = 12300000<br>
+            </li>
+            <li>About constant (they're more bastards than u think): <a
+                    href="https://www.w3schools.com/Js/js_const.asp">here</a></li>
+            <li><code>===</code> operator stands for: 'not equal value or not equal type'</li>
+            <li>Scientific notation 4 extra {large | small} numbers:<br>
+                <code>let x = 123e5; // x = 12300000<br>
                             let y = 123e-5;  // y = 0,00123
                         </code>
-                    </li>
-                    <li>Fully documentation about JS string methods: <a href="https://www.w3schools.com/jsref/jsref_obj_string.asp">JavaScript String Reference</a></li>
-                </ol>
             </li>
-            <li>
-                <h4>HTML utils 4 JS</h4>
-                <ol>
-                    <li>JavaScript Event Handlers 4 <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">HTML DOM Events</a>.</li>
-                </ol>
-            </li>
-        </ul>
+            <li>Fully documentation about JS string methods: <a
+                    href="https://www.w3schools.com/jsref/jsref_obj_string.asp">JavaScript String Reference</a></li>
+        </ol>
 
         <h3>Good practices</h3>
         <ol>
             <li>U should declare variable using 'const' (when it's possible) or 'let'. See more <a
                     href="https://www.w3schools.com/Js/js_variables.asp">here</a></li>
-            <li>Charecters '<code>$</code>' and '<code>_</code>' are treats as letters. 2 good practices 4 declaring vars with these simbols are:
+            <li>Charecters '<code>$</code>' and '<code>_</code>' are treats as letters. 2 good practices 4 declaring
+                vars with these simbols are:
                 <ol>
                     <li>Use the '<code>$</code>' simbol as an alias 4 the main functione in a JavaScript library.</li>
                     <li>Use the '<code>_</code>' simbol as an alias 4 private (hidden) variables</li>
                     <li>Use methods 2 manipulate strings and not treat them as arrays! (they're not arrays)</li>
+                    <li>When u should use Arrays and when Object?<br>
+                        <ul>
+                            <li>You should use objects when you want the element names to be strings (text).</li>
+                            <li>You should use arrays when you want the element names to be numbers.</li>
+                        </ul>
+                    </li>
                 </ol>
             </li>
+            <li>Since <code>const</code> was introduced, it has become a common practice to declare arrays using <code>const</code></li>
         </ol>
 
         <h3>Don't forget!</h3>
@@ -82,8 +92,27 @@
                     x = undefined; // x's value is  now 'undefined' & typeof sx now returns 'undefined'
                 </code>
             </li>
-            <li>If you access an object method without (), it will return the function definition. Example <a href="https://www.w3schools.com/Js/tryit.asp?filename=tryjs_objects_function">here</a>.</li>
+            <li>If you access an object method without (), it will return the function definition. Example <a
+                    href="https://www.w3schools.com/Js/tryit.asp?filename=tryjs_objects_function">here</a>.</li>
             <li>Comparing two JavaScript objects always returns false.</li>
+            <li><code>
+                let x = Number.MAX_VALUE;   // x = Largest possible number in JavaScript
+                let y = Number.MIN_VALUE;   // y = Lowest possible number in JavaScript
+            </code></li>
+            <li>About arrays and objects:
+                <ul>
+                    <li>Objects cannot access to array method</li>
+                    <li>In JavaScript, arrays only use numbered indexes.</li>
+                    <li>In JavaScript, objects use named indexes.</li>
+                    <li>JavaScript doesn't support associative arrays. Arrays that try to use named indexes will be
+                        converted in objects.</li>
+                    <li>In JS, arrays are <u>always</u> an object (so typeof() will return 'objects' both for objects
+                        that use named index and arrays that use numbered index).<br>
+                        To dinstingue an array form an object u need 2 use <code>exampleArr.isArray()</code> method.
+                    </li>
+                </ul>
+            </li>
+            <li>JavaScript <code>const</code> variables must be assigned a value when they are declared. Using <code>const</code> without initializing the array will give a syntax error. </li>
         </ol>
 
         <h3>Utils</h3>
@@ -95,7 +124,8 @@
                         <ul>
                             <li><code>substring(start, end)</code></li>
                             <li><code>substr(start, length)</code></li>
-                            <li><code>replace(str2replace, newStr) // see also the <a href="https://www.w3schools.com/Js/tryit.asp?filename=tryjs_string_replace_global"><b>/g</b> flag</a> for this method!</code></li>
+                            <li><code>replace(str2replace, newStr) // see also the <a href="https://www.w3schools.com/Js/tryit.asp?filename=tryjs_string_replace_global"><b>/g</b> flag</a> for this method!</code>
+                            </li>
                             <li><code>concat(str1, str2) // This method is equivalent 2 the plus operator.</code></li>
                             <li><code>trim() // Remove useless whitespaces</code></li>
                             <li><code>split() // Convert a string to an array</code></li>
@@ -103,12 +133,30 @@
                     </li>
                     <li>Useful Number methods:
                         <ul>
-                            <li><code>numVar.toExponential(baseToConvert) // See more <a href="https://www.w3schools.com/Js/tryit.asp?filename=tryjs_number_toexponential">here</a></code></li>
+                            <li><code>numVar.toExponential(baseToConvert) // See more <a href="https://www.w3schools.com/Js/tryit.asp?filename=tryjs_number_toexponential">here</a></code>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Useful Array methods:
+                        <ul>
+                            <li><code>exampleArr.isArray() // Method 2 check if exampleArr is an array or not</code>
+                            </li>
+                            <li><code>exampleArr.forEach() // See more <a href="https://www.w3schools.com/Js/js_array_iteration.asp">here</a></code>
+                            </li>
+                            <li>The map() method creates a new array by performing a function on each array element. See
+                                more <a href="https://www.w3schools.com/Js/js_array_iteration.asp">here</a></li>
+                            <li>The filter() method creates a new array with array elements that passes a test. See more
+                                <a href="https://www.w3schools.com/Js/js_array_iteration.asp">here</a>
+                            </li>
+                            <li>The every() method check if all array values pass a test. See more <a
+                                    href="https://www.w3schools.com/Js/js_array_iteration.asp">here</a></li>
+                            <li>The some() method check if some array values pass a test. See more <a
+                                    href="https://www.w3schools.com/Js/js_array_iteration.asp">here</a></li>
                         </ul>
                     </li>
                 </ul>
             </li>
-            <li></li>
+            <li>...</li>
         </ul>
 
     </main>
