@@ -21,44 +21,65 @@
             <li>JavaScript Array Reference <a href="https://www.w3schools.com/jsref/jsref_obj_array.asp">here</a></li>
             <li>#HTML utils 4 JS JavaScript Event Handlers 4 <a
                     href="https://www.w3schools.com/jsref/dom_obj_event.asp">HTML DOM Events</a>.</li>
+            <li>JSON short course <a href="https://www.w3schools.com/Js/js_json_intro.asp">here</a>.</li>
+            <li>JS (w3schools) Style Guide: <a href="https://www.w3schools.com/Js/js_conventions.asp">here</a>.</li>
         </ul>
 
-
-
-        <h3>Important things about: JS</h3>
+        <h3>Important things about:</h3>
         <ol>
-            <li>JavaScript Display Possibilities <a href="https://www.w3schools.com/Js/js_output.asp">here</a></li>
-            <li>Reserved words <a href="https://www.w3schools.com/Js/js_reserved.asp">here</a></li>
-            <li>Strings are written inside double or single quotes:<br>
-                <code>let str = "ao;"</code> is equivalent to <code>let str = 'ao';</code>
+            <li><h3>JS</h3>
+                <ol>
+                    <li>JavaScript Display Possibilities <a href="https://www.w3schools.com/Js/js_output.asp">here</a></li>
+                    <li>Reserved words <a href="https://www.w3schools.com/Js/js_reserved.asp">here</a></li>
+                    <li>Strings are written inside double or single quotes:<br>
+                        <code>let str = "ao;"</code> is equivalent to <code>let str = 'ao';</code>
+                    </li>
+                    <li>undefined value:<br>
+                        <code>let exampleVar; // No value assigned -> exampleVar's value is <b>undefined</b></code>
+                    </li>
+                    <li><code>let x = "5" + 2 + 3; // x = "523"</code><br>
+                        <code>let x = 2 + 3 + "5"; // x = (2 + 3) + "5" = 5 + "5" = "55"</code>
+                    </li>
+                    <li>Variable declared using <code>var</code> are <u>always</u> global:<br>
+                        <code>
+                                    {<br>
+                                    let x;<br>
+                                    const y;<br>
+                                    } // x and y cannot b3 used here<br>
+                                    {<br>
+                                    var z;<br>
+                                    } // z can b3 used here
+                                </code>
+                    </li>
+                    <li>About constant (they're more bastards than u think): <a
+                            href="https://www.w3schools.com/Js/js_const.asp">here</a></li>
+                    <li><code>===</code> operator stands for: 'not equal value or not equal type'</li>
+                    <li>Scientific notation 4 extra {large | small} numbers:<br>
+                        <code>let x = 123e5; // x = 12300000<br>
+                                    let y = 123e-5;  // y = 0,00123
+                                </code>
+                    </li>
+                    <li>Fully documentation about JS string methods: <a
+                            href="https://www.w3schools.com/jsref/jsref_obj_string.asp">JavaScript String Reference</a></li>
+                    <li>About JS <code>set</code>, se something <a href="https://www.w3schools.com/Js/js_sets.asp">here</a>.</li>
+                    <li>About JS <code>map</code>, se something <a href="https://www.w3schools.com/Js/js_maps.asp">here</a>.</li>
+                    <li>Difference Between Undefined and Null:<br>
+                        <code>
+                            typeof undefined           // undefined<br>
+                            typeof null                // object<br>
+                            <br>
+                            null === undefined         // false<br>
+                            null == undefined          // true<br></code>
+                    </li>
+                    <li>Shit about <b>import</b> and <b>export</b>. See more <a href="https://www.w3schools.com/Js/js_modules.asp">here</a>.</li>
+                </ol>
             </li>
-            <li>undefined value:<br>
-                <code>let exampleVar; // No value assigned -> exampleVar's value is <b>undefined</b></code>
+            <li><h3>JSON</h3>
+                See an little introduction <a href="https://www.w3schools.com/Js/js_json.asp">here</a>.
+                <ol>
+                    <li>8=====Dick</li>
+                </ol>
             </li>
-            <li><code>let x = "5" + 2 + 3; // x = "523"</code><br>
-                <code>let x = 2 + 3 + "5"; // x = (2 + 3) + "5" = 5 + "5" = "55"</code>
-            </li>
-            <li>Variable declared using <code>var</code> are <u>always</u> global:<br>
-                <code>
-                            {<br>
-                            let x;<br>
-                            const y;<br>
-                            } // x and y cannot b3 used here<br>
-                            {<br>
-                            var z;<br>
-                            } // z can b3 used here
-                        </code>
-            </li>
-            <li>About constant (they're more bastards than u think): <a
-                    href="https://www.w3schools.com/Js/js_const.asp">here</a></li>
-            <li><code>===</code> operator stands for: 'not equal value or not equal type'</li>
-            <li>Scientific notation 4 extra {large | small} numbers:<br>
-                <code>let x = 123e5; // x = 12300000<br>
-                            let y = 123e-5;  // y = 0,00123
-                        </code>
-            </li>
-            <li>Fully documentation about JS string methods: <a
-                    href="https://www.w3schools.com/jsref/jsref_obj_string.asp">JavaScript String Reference</a></li>
         </ol>
 
         <h3>Good practices</h3>
@@ -80,6 +101,8 @@
                 </ol>
             </li>
             <li>Since <code>const</code> was introduced, it has become a common practice to declare arrays using <code>const</code></li>
+            <li>Do not use <code>for in</code> over an Array if the index order is important. Use instead a for loop, a for of loop, or Array.forEach() when the order is important.</li>
+            <li>Use <code>"strict mode"</code> by literally typing <code>strict mode</code> at the beginning of a script.</li>
         </ol>
 
         <h3>Don't forget!</h3>
@@ -113,6 +136,23 @@
                 </ul>
             </li>
             <li>JavaScript <code>const</code> variables must be assigned a value when they are declared. Using <code>const</code> without initializing the array will give a syntax error. </li>
+            <li>Difference between <code>for in</code> and <code>for of</code>:<br>
+                <code>
+                    /* THE FOLLOWING <code>for</code> CYCLES ARE EQUIVALENT */
+                    const cars = ["BMW", "Volvo", "Mini"];<br>
+                    let text = "";<br>
+                    <br>
+                    for (let x of cars)<br>
+                      text += x + "<br>";<br>
+                    <br>
+                    for (let x in cars)
+                      text += cars[x] + "<br>";<br>
+                </code>
+            </li>
+            <li>The <code>continue</code> statement "jumps over" one iteration in the loop.</li>
+            <li><code>try, catch, finally, throw</code> statements.</li>
+            <li>Be careful using the keyword <code>this</code>, pay attenction where u use it! For example it has a different meaning in regular functions and arrow functions.</li>
+            <li>JS Modules. See more <a href="https://www.w3schools.com/Js/js_modules.asp">here</a>.</li>
         </ol>
 
         <h3>Utils</h3>
