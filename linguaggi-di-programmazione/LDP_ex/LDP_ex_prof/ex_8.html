@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <pre class="preTag_exercise">
+<p class="codeText">Si dica cosa viene stampato dal seguente frammento di codice scritto in uno pseudo-linguaggio che usa scoping statico e passaggio di parametri per valore e per riferimento</p>
+int x = 0;
+
+void pippo(value int y, rif int z)
+        z = x + y + z;
+{
+    int x = 1;
+    int y = 10;
+    int z = 20;
+    pippo(x++, x);
+    pippo(x++, x);
+    write(x);
+}
+write(x);</pre>
+
+</body>
+
+</html>
