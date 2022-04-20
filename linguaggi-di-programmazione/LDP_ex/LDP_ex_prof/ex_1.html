@@ -11,9 +11,19 @@
 
 <body>
     <pre class="preTag_exercise">
-for (init; condition; increment) {
-    ex_1;
-}</pre>
+<p class="codeText">Si dica cosa viene stampato dal seguente frammento di codice scritto in uno pseudo-linguaggio che usa scoping statico e passaggio di parametri per valore.</p>
+int x = 2;
+
+void pippo (value int y)
+    x = x + y;
+
+{
+    int x = 5;
+    pippo(x++);
+    write(x);
+}
+    
+write(x);</pre>
 
 </body>
 

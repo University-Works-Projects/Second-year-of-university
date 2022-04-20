@@ -6,3 +6,13 @@
     border: 1px solid #d6d6d6;
     margin-left: 30px;
 }
+
+.codeText {
+    white-space: break-spaces;
+    /* Valid alternatives
+       white-space: normal;
+       white-space: pre-wrap;
+       white-space: pre-line;
+       white-space: normal;
+    */
+}
