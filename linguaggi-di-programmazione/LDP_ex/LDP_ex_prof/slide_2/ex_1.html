@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <pre class="preTag_exercise">
+<p class="codeText">Si dica cosa viene stampato dal seguente frammento di codice scritto in uno pseudo-linguaggio con passaggio per nome e scoping statico.</p>
+int x = 3;
+
+void foo(name int y) {
+    int x = 5;
+    int w;
+    x = x + y;
+    w = y;
+    write(x);
+    write(y);
+}
+
+foo(x++);
+write(x);
+
+
+SOLUZIONE:
+codice equivalente ed esecuzione commentata:
+
+int x = 3;
+void foo(name int y) {  // foo(3++) -> y = x++
+    int k = 5;
+    int w;
+    k = k + x++;        // k=5+3 & x+=1 (dunque x=4)
+    w = x++;            // w=4 & x+=1 (dunque x=5)
+    write(k);           // print: 8
+    write(x++);         // print: 5 & x+=1 (dunque x=6)
+}
+
+foo(x++);               // x nn si incrementa x via del passaggio x nome
+write(x);               //print: 6</pre>
+
+</body>
+
+</html>

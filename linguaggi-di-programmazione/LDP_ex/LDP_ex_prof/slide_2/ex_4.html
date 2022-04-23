@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <pre class="preTag_exercise">
+<p class="codeText">Passaggio: per nome; Scope: statico; Altro: valuta le espressioni da SX ADX</p>
+int x=3
+int y=4
+int f(name int a)
+    int x=5
+    y=y+a
+    y=y+a
+    return a
+write(f(x+y)+y)
+
+SOLUZIONE:
+codice equivalente ed esecuzione commentata:
+
+int x=3
+int y=4
+int f(name int a)   // f(x+y) -> a=x+y
+    int k=5
+    y=y+(x+y)           // y=4+(3+4)=4+7
+    y=y+(x+y)           // y=11+(3+11)=11+14
+    return(x+y)         // return: 3+25
+write(f(x+y)+y)     // write(f(3+4) + 25) -> write(53)</pre>
+
+</body>
+
+</html>
