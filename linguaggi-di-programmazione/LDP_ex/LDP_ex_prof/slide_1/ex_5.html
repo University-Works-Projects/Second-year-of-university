@@ -6,24 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
     <pre class="preTag_exercise">
-<p class="codeText">Si dica cosa viene stampato dal seguente frammento di codice scritto in uno pseudo-linguaggio che usa scoping statico e passaggio di parametri per valore.</p>
+<p class="codeText">Si dica cosa stampa il seguente frammento in uno pseudolinguaggio con passaggio per riferimento e scope statico.</p>
 int x = 2;
-
-void pippo (value int y)
+void foo(reference int y) {
+    x = x + 1;
+    y = y + 10;
     x = x + y;
-
-{
-    int x = 5;
-    pippo(x++);
     write(x);
 }
-    
-write(x);</pre>
+{
+    int x = 10;
+    foo(x);
+    write(x);
+}</pre>
 
 </body>
 

@@ -6,27 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
     <pre class="preTag_exercise">
-<p class="codeText">Si dica cosa stampa il seguente frammento in uno pseudolinguaggio con scope dinamico</p>
-int x = 4;
+<p class="codeText">Si dica cosa stampa il seguente frammento in uno pseudolinguaggio scope statico</p>
+int x = 3;
 
 void foo(int y) {
-    int w;
+    int x = 5;
     x = x + y;
-    w = y;
-    write(w);
+    x = x + y;
+    write(x);
     write(y);
 }
-{
-    int x = 10;
-    foo(x);
-    write(x);
-}
-</pre>
+
+foo(x++);
+write(x);</pre>
 
 </body>
 
