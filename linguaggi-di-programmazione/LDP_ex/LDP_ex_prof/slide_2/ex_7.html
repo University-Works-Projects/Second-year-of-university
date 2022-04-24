@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../ex_style.css">
+</head>
+
+<body>
+    <pre class="preTag_exercise">
+<p class="codeText">Dato il seguente codice, si definiscano le modalità di passaggio dei parametri di <code>pippo</code> e si indichino 
+    i parametri attuali da sostituire agli <code>*</code>, affinché i valori stampati dallo script siano 7 ed 8 (in quest'ordine).</p>
+int x=5
+
+void pippo(int x, int y)
+    int z=0
+    z=x+1-y+y
+    write(z)
+
+{
+    pippo(*,*)
+    write(x)
+}
+
+SOLUZIONE:
+Passaggio: per nome; * := x++
+
+int x=5
+void pippo(name int x, name int y)  // call: pippo(5++,5++)
+    int z=0
+    z=(x++)+1-(x++)+(x++)               // z=(5++)+1-(5++)+(5++) == 5+1-(6++)+(6++) == 6-6+(7++) == 0+7 == 7 & x==8
+    write(z)                            // print: 7
+{
+    pippo(x++,x++)
+    write(x)                        // print: 8
+}</pre>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../ex_style.css">
+</head>
+
+<body>
+    <pre class="preTag_exercise">
+<p class="codeText">Nel seguente codice, gli assegamenti sono valutati come segue: prima l'espressione a DX di '='; poi quella a SX; infine si esegue l'assegnamento.
+    In parole povere: si esegue prima ciò che è a DX, poi quello a SX ed infine l'assegnamento. Detto ciò, qual è lo stato del vettore <code>A</code> dopo l'assegnamento?</p>
+int x=1
+int A[5]
+for (int i=0; 5>i; i++)
+    A[i]=i
+A[x++]=A[x++]+1
+
+SOLUZIONE:
+codice commentato e "tradotto", ora gli assegnamenti sono normali
+
+int x=1
+int A[5]
+for (int i=0; 5>i; i++)
+    A[i]=i                  // A=[0,1,2,3,4]
+A[x++]=A[x++]+1             // Prima la parte a DX: A[x++]+1 == A[1++]+1 == 1+1 & x+=1
+                            // Poi la parte a SX: A[x++] == A[2++] == 2 & x+=1
+                                // Dunque si ha: A[x++]=A[x++]+1 == A[2]=A[1]+1 con x==3
+                            // E quindi (assegnamento): A[2]=1+1 -> A=[0,1,2,3,4]</pre>
+
+</body>
+
+</html>
