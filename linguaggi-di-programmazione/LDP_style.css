@@ -1,0 +1,15 @@
+.container {
+    display: grid;
+    height: 400px;
+    grid-template-areas: "head head"
+                         "col1 col2"
+                         "foot foot";
+}
+
+#col_1 {
+    grid-area: col1;
+}
+
+#col_2 {
+    grid-area: col2;
+}
