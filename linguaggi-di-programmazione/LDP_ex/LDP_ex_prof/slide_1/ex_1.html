@@ -16,14 +16,27 @@ int x = 2;
 
 void pippo (value int y)
     x = x + y;
-
 {
     int x = 5;
     pippo(x++);
     write(x);
 }
     
-write(x);</pre>
+write(x);
+
+
+SOLUZIONE:
+codice equivalente ed esecuzione commentata:
+
+int x = 2;
+void pippo (value int y)    // call: pippo(5++) & k==6
+    x = x + y;              // x=2+5
+{
+    int k = 5;
+    pippo(k++);
+    write(k);               // print: 6
+}
+write(x);                   // print: 7</pre>
 
 </body>
 
