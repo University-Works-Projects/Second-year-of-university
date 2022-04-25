@@ -14,6 +14,3 @@ How to run a .c file:
         gcc -c filename.c           # Generate the object file fileName.o
         gcc fileName.o              # Calls the linker ang gaenerate the executable file from the object file
         ./a.out
-
-
-
