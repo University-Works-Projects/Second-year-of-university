@@ -11,22 +11,38 @@
 
 <body>
     <pre class="preTag_exercise">
-<p class="codeText">Si dica cosa stampa il seguente frammento in uno pseudolinguaggio con passaggio per valore e scope statico.</p>
-int x = 3;
-int y = 4;
+<p class="codeText">Scope: statico; Passaggio: per valore</p>
+int x = 3
+int y = 4
 
-void foo(int y, int z) {
-    int x = 5;
-    y = y + 1;
+void foo(int y, int z)
+    int x = 5
+    y = y + 1
     if (z == y)
-        write(x);
+        write(x)
     else
-        write(y);
-}
+        write(y)
 
-foo(x, x);
-write(x);
-write(y);</pre>
+foo(x,x)
+write(x)
+write(y)
+
+
+SOLUZIONE:
+codice equivalente e commentato:
+
+int x=3, y=4
+void foo(int w, int z)      // call(3,3)
+    int k = 5
+    w = w + 1               // w=3+1
+    if (z == w)             // 3 == 4 -> False: else case
+        write(k)
+    else
+        write(w)            // print: 4
+
+foo(x,x)
+write(x)                    // print: 3
+write(y)                    // print: 4</pre>
 
 </body>
 

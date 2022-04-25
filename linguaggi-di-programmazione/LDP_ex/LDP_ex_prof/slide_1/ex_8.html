@@ -11,20 +11,42 @@
 
 <body>
     <pre class="preTag_exercise">
-<p class="codeText">Si dica cosa viene stampato dal seguente frammento di codice scritto in uno pseudo-linguaggio che usa scoping statico e passaggio di parametri per valore e per riferimento</p>
-int x = 0;
+<p class="codeText">Scope: statico; Passaggio: per {valore & riferimento}</p>
+int x = 0
 
 void pippo(value int y, rif int z)
-    z = x + y + z;
+    z = x + y + z
 {
-    int x = 1;
-    int y = 10;
-    int z = 20;
-    pippo(x++, x);
-    pippo(x++, x);
-    write(x);
+    int x = 1
+    int y = 10
+    int z = 20
+    pippo(x++,x)
+    pippo(x++,x)
+    write(x)
 }
-write(x);</pre>
+write(x)
+
+SOLUZIONE:
+codice commentato:
+
+// NOTA IMPORTANTE:
+    int x = 6;
+    pippo(x++,x)    // i parametri attuali di pippo sono: 6 e 7
+
+int x = 0
+void pippo(value int y, rif int z)      // call_n1(1++,2)
+                                        // call_n2(3++,4)
+    z = x + y + z                       // call_n1: &x=0+1+2
+                                        // call_n2: &x=0+3+4
+{
+    int x = 1
+    int y = 10
+    int z = 20
+    pippo(x++,x)    // terminata l'esecuzione di pippo si ha: x=3
+    pippo(x++,x)    // terminata l'esecuzione di pippo si ha: x=7
+    write(x)        // print: 7
+}
+write(x)            // print: 0</pre>
 
 </body>
 

@@ -11,7 +11,7 @@
 
 <body>
     <pre class="preTag_exercise">
-<p class="codeText">Scope: statico</p>
+<p class="codeText">Scope: statico; Passaggio: per valore</p>
 int x = 3
 
 void foo(int y)
@@ -27,7 +27,15 @@ write(x)
 SOLUZIONE:
 codice equivalente e commentato:
 
-</pre>
+int x = 3
+void foo(int y)     // call: foo(3++)
+    int k = 5
+    k = k + y       // k=5+3
+    k = k + y       // k=8+3
+    write(k)        // print: 11
+    write(y)        // print: 3
+foo(x++)
+write(x)            // print: 4</pre>
 
 </body>
 

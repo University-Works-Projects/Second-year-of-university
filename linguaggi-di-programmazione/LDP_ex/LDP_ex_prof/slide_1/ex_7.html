@@ -11,22 +11,37 @@
 
 <body>
     <pre class="preTag_exercise">
-<p class="codeText">Si dica cosa stampa il seguente frammento in uno pseudolinguaggio con scope dinamico</p>
-int x = 4;
+<p class="codeText">Scope: dinamico; Passaggio: per valore</p>
+int x = 4
 
-void foo(int y) {
-    int w;
-    x = x + y;
-    w = y;
-    write(w);
-    write(y);
-}
+void foo(int y)
+    int w
+    x = x + y
+    w = y
+    write(w)
+    write(y)
 {
-    int x = 10;
-    foo(x);
-    write(x);
+    int x = 10
+    foo(x)
+    write(x)
 }
-</pre>
+
+
+SOLUZIONE:
+codice commentato:
+
+int x = 4
+void foo(int y)     // foo(10) -> y=10
+    int w           // 2.
+    x = x + y       // 3. x=10+10   (si fa riferimento alla x di 0.)
+    w = y           // 4. w=10
+    write(w)        // 5. print: 10
+    write(y)        // 6. print: 10
+{
+    int x = 10      // 0.
+    foo(x)          // 1.
+    write(x)        // 7. print: 20
+}</pre>
 
 </body>
 
