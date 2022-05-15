@@ -13,6 +13,96 @@
         <h1>LDP_exercises</h1>
         <h1>Index <a href="../../../tecnologie-web/site-index.html" title="Index">here</a></h1>
         <br>
+
+        <h3>Solutions</h3>
+        <p>Exercise:</p>
+        <ol>
+            <li>Done
+<pre class="preTag_exercise"><code>
+/* Equivalent code */
+int x=5
+void foo(name int y)
+    x=x-1
+    y=y+10
+    x=x+y
+    write(x)
+{
+    int k=12
+    foo(k)
+    write(k)
+}
+
+/* Explained solution */
+int x=5
+void foo(name int y)        // Call: foo(k)
+    x=x-1                   // x=5-1=4
+    y=y+10                  // y=12+10=22
+    x=x+y                   // x=4+22=26
+    write(x)                // print: 26
+{
+    int k=12
+    foo(k)
+    write(k)                // print: 12
+}</code></pre>
+            </li>
+            <br>
+            
+            <li>
+                Boh
+            </li>
+            <br>
+            
+            <li>
+                Boh
+                <code>
+                    // After the for cycle u've: V[0]=0, .., V[9]=9
+                    V[4]=V[4++]+V[5++] === V[4]=V[5]+V[6] === V[4]=4+5=9 (incremento locale?)
+                    write(V[4])     // V[4] = 9
+                </code>
+            </li>
+            <br>
+            
+            <li>
+                shallow and deep binding + parametri di ordine superiore
+            </li>
+            <br>
+
+            <li>
+                Boh
+<pre><code>
+/* The code */
+class A {
+    int x = 10;
+    void f() { write(x); }
+    void g() { f(); }
+}
+class B extending A {
+    int x = 20;
+    void f() { write(x); }
+}
+
+/* Explained solution */
+A a = new A();
+a.g();          // print: 10 (la x di a)
+a.f();          // print: 10 (la x di a)
+B b = new B();
+a = b;          // ??? non so se a.x è ora = ad b.x, ma se si assume di no si ha:
+a.g();          // print: 10 (la x di a)
+a.f();          // print: 10 (la x di a)
+write (a.x);    // print: 10 (la x di a)
+write (b.x);    // print: 20 (la x di a)
+b.g();          // print: ???
+</code></pre>
+            </li>
+            <br>
+
+            <li>
+
+            </li>
+            <br>
+
+        </ol>
+
     </main>
 </body>
 
