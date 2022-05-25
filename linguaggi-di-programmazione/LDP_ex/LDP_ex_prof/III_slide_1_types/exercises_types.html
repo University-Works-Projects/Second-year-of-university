@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>types-exercises</title>
+</head>
+
+<body>
+    <main>
+        <h1>LDP_exercises_types</h1>
+        <h1>Index <a href="../../../../tecnologie-web/site-index.html" title="Index">here</a></h1>
+        <br>
+
+        <h2>Ex 1</h2>
+        <h3>Text</h3>
+        <p>see the pdf asshole</p>
+        <h3>Solution</h3>
+        <pre class="preTag_exercise"><code>
+/* Explanation */
+void foo ( int* x, int* y, int* j ){        // Call: foo(x(that points to x[0]), &x[1]==2, &i==1)
+    x[ *j ] = *j + 1;                       // x[0+1]=1+1=2
+    print( *y );                            // print: 2 (cuz &x[1]==2)
+    x++;                                    // x now points to x[1]
+    x[ *j ] = *j;                           // x[1+1]=1 (1+1 per via di "x++;")
+    print( x[ *j ], *j );                   // print: (x[1+1]==)1, 1
+    *j = *j + 1;                            // &i=1+1=2
+}
+
+int[] x[ 10 ];
+int i = 1;
+x[ 0 ] = 1;
+x[ 1 ] = 2;
+x[ 2 ] = 3;
+foo( x, &x[ i ], &i );
+print( x[ i ], i );                         // print: 1 (cuz x points to x[0], so x[0+2]==1) 2 (cuz i==2)</code></pre>
+
+        <h2>Ex 2</h2>
+        <h3>Text</h3>
+        <p>see the pdf asshole</p>
+        <h3>Solution</h3>
+        <pre class="preTag_exercise"><code>
+/* Text's code */
+int i, j;
+float y, z;
+y = f(i, j);
+z = f(y, i);
+</code></pre>
+        <p>A possible solution could be: <code>int <: float</code> whit <code>f: float -> int -> float</code>, where the first <code>float</code> is the first formal parameter of <code>f</code> 
+            and the latter is the the returned type, while <code>int</code> is the second formal parameter.</p>
+            <p>Formally: <code>f: act_param_1 -> act_param_2 -> returned-type</code></p>
+
+        <h2>Ex 3</h2>
+        <h3>Text</h3>
+        <p>see the pdf asshole</p>
+        <h3>Solution</h3>
+
+        <h2>Ex 4</h2>
+        <h3>Text</h3>
+        <p>see the pdf asshole</p>
+        <h3>Solution</h3>
+
+        <h2>Ex 5</h2>
+        <h3>Text</h3>
+        <p>see the pdf asshole</p>
+        <h3>Solution</h3>
+
+        <h2>Ex 6</h2>
+        <h3>Text</h3>
+        <p>see the pdf asshole</p>
+        <h3>Solution</h3>
+
+        <h2>Ex 7</h2>
+        <h3>Text</h3>
+        <p>see the pdf asshole</p>
+        <h3>Solution</h3>
+    </main>
+</body>
+
+</html>
