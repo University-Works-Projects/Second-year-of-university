@@ -18,39 +18,93 @@
         <h3>Text</h3>
         <p>see the pdf asshole</p>
         <h3>Solution</h3>
+        <pre class="preTag_exercise"><code>
+class Elem {
+    int n;
+    Elem next;
+    Elem foo() {
+        Elem p = new Elem(); // OGG1        count_OGG1 = 1
+        p.next = new Elem(); // OGG2        count_OGG2 = 1
+        Elem q = new Elem(); // OGG3        count_OGG3 = 1
+        q.next = p.next;                    count_OGG2 = 2
+        return p.next;                      count_OGG2 = 3
+    }
+}
+Elem r = Elem.foo();
+// now: count_OGG1=1-1=0, count_OGG2=3-2=1, count_OGG3=1-1=0</code></pre>
 
         <h2>Ex 2</h2>
         <h3>Text</h3>
         <p>see the pdf asshole</p>
         <h3>Solution</h3>
         <pre class="preTag_exercise"><code>
-/* Text's code */
-</code></pre>
+List< Int > l = List< Int >.new();          // OGG1     count_OGG1 = 1
+List< Int > h = List< Int >.new();          // OGG2     count_OGG2 = 1
+l.add( 0 ).add( 1 ).add( 2 ).add( 3 );      // l == [0 1 2 3]
+h.add( 100 ).add( 200 );                    // h == [100 200]
+
+void f( List< Int > x ){
+    List< Int > w = List< Int >.new();          // OGG3     count_OGG3 = 1
+    w.add( 10 ).add( 20 );                      // w == [10 20]
+    x.set( 3, 40 );                             // l == [0 1 2 40]  (l globale per via del passaggio per riferimento)
+    h = w;                                      // h == [10 20]
+    w.set( 0, 30 );                             // w == [30 20], h == [30 20] (?)
+}
+
+// In questo punto si ha: count_OGG1==1, count_OGG2==2, count_OGG3==0
+f( l );
+print( l );                                 // print: [0 1 2 40]
+print( h );                                 // print: [10 20] (oppure [30 20])</code></pre>
 
         <h2>Ex 3</h2>
         <h3>Text</h3>
         <p>see the pdf asshole</p>
         <h3>Solution</h3>
+        <pre class="preTag_exercise"><code>
+C bar = new C();        // OGG2     count_OGG2 = 1
+{
+    C foo = new C();    // OGG1     count_OGG1 = 1
+    C fie = foo;        //          count_OGG1 = 2
+    bar = fie;          //          count_OGG1 = 3  count_OGG2=1-1=0
+}                       //          count_OGG1=3-2=1, count_OGG2 = 0</code></pre>
 
         <h2>Ex 4</h2>
         <h3>Text</h3>
         <p>see the pdf asshole</p>
         <h3>Solution</h3>
+        <pre class="preTag_exercise"><code>
+/* In C */
+int* a = NULL;
+void sum () {
+    int b = 4;
+    a = &b;
+}
+int main () {
+    printf("%l", a);    // segmentation fault error
+    return 0;
+}
+</code></pre>
 
         <h2>Ex 5</h2>
         <h3>Text</h3>
         <p>see the pdf asshole</p>
         <h3>Solution</h3>
+        <pre class="preTag_exercise"><code>
+class C {
+    int n;
+    C next;
+}
+C foo (){
+    C p = new C();          // OGG1     count_OGG1 = 1
+    p.next = new C();       // OGG2     count_OGG2 = 1
+    C q = new C();          // OGG3     count_OGG3 = 1
+    q.next = p.next;                    count_OGG2 = 2
+    return p.next;                      count_OGG2 = 3
+}
+// here we've: count_OGG1==0, count_OGG2==0, count_OGG3==1
+C r = foo();
+</code></pre>
 
-        <h2>Ex 6</h2>
-        <h3>Text</h3>
-        <p>see the pdf asshole</p>
-        <h3>Solution</h3>
-
-        <h2>Ex 7</h2>
-        <h3>Text</h3>
-        <p>see the pdf asshole</p>
-        <h3>Solution</h3>
     </main>
 </body>
 
