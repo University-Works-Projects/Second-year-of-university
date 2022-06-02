@@ -14,6 +14,8 @@
         <h1>Index <a href="../../../../tecnologie-web/site-index.html" title="Index">here</a></h1>
         <br>
 
+
+
         <h2>Ex 1</h2>
         <h3>Text</h3>
         <p>see the pdf asshole</p>
@@ -33,6 +35,8 @@ class Elem {
 Elem r = Elem.foo();
 // now: count_OGG1=1-1=0, count_OGG2=3-2=1, count_OGG3=1-1=0</code></pre>
 
+
+
         <h2>Ex 2</h2>
         <h3>Text</h3>
         <p>see the pdf asshole</p>
@@ -51,10 +55,12 @@ void f( List< Int > x ){
     w.set( 0, 30 );                             // w == [30 20], h == [30 20] (?)
 }
 
-// In questo punto si ha: count_OGG1==1, count_OGG2==2, count_OGG3==0
+// Here we have: count_OGG1==1, count_OGG2==1, count_OGG3==0
 f( l );
 print( l );                                 // print: [0 1 2 40]
 print( h );                                 // print: [10 20] (oppure [30 20])</code></pre>
+
+
 
         <h2>Ex 3</h2>
         <h3>Text</h3>
@@ -66,7 +72,10 @@ C bar = new C();        // OGG2     count_OGG2 = 1
     C foo = new C();    // OGG1     count_OGG1 = 1
     C fie = foo;        //          count_OGG1 = 2
     bar = fie;          //          count_OGG1 = 3  count_OGG2=1-1=0
-}                       //          count_OGG1=3-2=1, count_OGG2 = 0</code></pre>
+}
+// Here we have: count_OGG1=3-2=1, count_OGG2 = 0</code></pre>
+
+
 
         <h2>Ex 4</h2>
         <h3>Text</h3>
@@ -85,6 +94,8 @@ int main () {
 }
 </code></pre>
 
+
+
         <h2>Ex 5</h2>
         <h3>Text</h3>
         <p>see the pdf asshole</p>
@@ -101,9 +112,8 @@ C foo (){
     q.next = p.next;                    count_OGG2 = 2
     return p.next;                      count_OGG2 = 3
 }
-// here we've: count_OGG1==0, count_OGG2==0, count_OGG3==1
 C r = foo();
-</code></pre>
+// here we've: count_OGG1==0, count_OGG2==0, count_OGG3==1</code></pre>
 
     </main>
 </body>
