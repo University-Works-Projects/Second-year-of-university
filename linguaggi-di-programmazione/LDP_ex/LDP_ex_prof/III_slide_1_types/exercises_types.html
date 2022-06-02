@@ -14,6 +14,8 @@
         <h1>Index <a href="../../../../tecnologie-web/site-index.html" title="Index">here</a></h1>
         <br>
 
+
+
         <h2>Ex 1</h2>
         <h3>Text</h3>
         <p>see the pdf asshole</p>
@@ -37,6 +39,8 @@ x[ 2 ] = 3;
 foo( x, &x[ i ], &i );
 print( x[ i ], i );                         // print: 1 (cuz here x points to x[0], instead x[1], so x[0+2]==1) 2 (cuz i==2)</code></pre>
 
+
+
         <h2>Ex 2</h2>
         <h3>Text</h3>
         <p>see the pdf asshole</p>
@@ -52,6 +56,8 @@ z = f(y, i);</code></pre>
             <p>Formally: <code>f: act_param_1 -> act_param_2 -> returned-type</code></p>
             <p>Alternatively, more simply <code>float f(float var1, int var2) {...}</code></p>
 
+
+
         <h2>Ex 3</h2>
         <h3>Text</h3>
         <p>see the pdf asshole</p>
@@ -66,7 +72,9 @@ struct str2 {
 }</code></pre>
 <p><code>int</code> and <code>float</code> data type are compatible but not equivalent.</p>
 
-        <h2>Ex 4</h2>
+
+
+        <h2>Ex 4 - SOLUZIONE CON ERRORI</h2>
         <h3>Text</h3>
         <p>see the pdf asshole</p>
         <h3>Solution</h3>
@@ -79,11 +87,13 @@ struct str2 {
         <pre class="preTag_exercise"><code>
 f( List< A > a, List< B > b ){
     List< B > b = a; // I1              // Errore: List&lt;A&gt; e List&lt;B&gt; non sono confrontabili (come espresso nella consegna)
-    List< Top > at = a; // I2           // Errore: A &lt;: T permette la sola lettura, non la scrittura
+    List< Top > at = a; // I2           // Errore: avendo A &lt;: T, solo T può scrivere su A 
     List< A > a1 = b; // I3             // Errore: List&lt;A&gt; e List&lt;B&gt; non sono confrontabili (come espresso nella consegna)
-    List< ? :> A > a2 = a; // I4        // It's ok: ? sta scrivendo su A
-    List< ? <: B > b1 = a1; // I5       // Errore: List&lt;A&gt; e List&lt;B&gt; non sono confrontabili e B non può 
+    List< ? :> A > a2 = a; // I4        // Ok: ? sta leggendo  A
+    List< ? <: B > b1 = a1; // I5       // Errore: List&lt;A&gt; e List&lt;B&gt; non sono confrontabili e, inoltre, B (in quanto sottotipo, ovvero una sorta di sottoclasse, con dei campi in più) non può essere assegnata dal suo supertipo A.
 }</code></pre>
+
+
 
         <h2>Ex 5</h2>
         <h3>Text</h3>
@@ -102,24 +112,28 @@ else if (columns-major)
     W=columns</code></pre></p>
         <p>Dunque: <code>offset(2,3)=4*(6*2+3)=60</code></p>
 
-        <h2>Ex 6</h2>
+
+
+        <h2>Ex 6 - SOLUZIONE CON ERRORI</h2>
         <h3>Text</h3>
         <p>see the pdf asshole</p>
         <h3>Solution</h3>
         <code>
-        a = b               // Ok: A è un supertipo di B
-        c = b               // Errore: C non è un supertipo di B
-        a = sb.remove()     // Ok: sb.remove() ritorna un B, ed è ok perché A :> B
-        c = sb.remove()     // Errore: sb.remove() ritorna un B e C non è un supertipo di B
-        sa = sb             // Ok: A :> B and sa è di tipo A e sb è di tipo B           (credo) 
-        sb = sa             // Errore B non è supertipo di A                            (credo)
-        sc = sb             // Errore: C non è un supertipo di B                        (credo)
-        sb = sb             // Ok: operazioni tra gli stessi tipi non danno problemi    (credo)
+        a = b               // I1 Ok: A è un supertipo di B, ergo è consentito che a legga (e copi da) b.
+        c = b               // I2 Errore: C non è un supertipo di B, ergo c non può copiare da b.
+        a = sb.remove()     // I3 Ok: Dato che sb.remove() ritorna un B, si ha lo stesso discordo di I1.
+        c = sb.remove()     // I4 Errore: Dato che sb.remove() ritorna un B, si ha lo stesso discordo di I2.
+        sa = sb             // Ok: Stesso discorso di I1                                (credo) 
+        sb = sa             // Errore: Stesso discordo di I2                            (credo)
+        sc = sb             // Errore: Stesso discordo di I2
+        sb = sb             // Ok: operazioni tra gli stessi tipi non danno problemi
         sa.add( sc )        // boh
         sa.add( sb.remove() )   // boh
         b = sb.add( b )     // boh
-        c = sb.remove()     // boh</code>
+        c = sb.remove()     // Errore: Stesso discordo di I2</code>
         
+
+
         <h2>Ex 7</h2>
         <h3>Text</h3>
         <p>see the pdf asshole</p>
